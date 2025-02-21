@@ -1,6 +1,6 @@
 Life Organizer  
 Version: 1.0  
-Author(s): Team Innovate  
+Author(s): Team Rododendron
 Date: February 18, 2025
 
 ------------------------------------------------------------

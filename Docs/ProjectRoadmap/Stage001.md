@@ -1,5 +1,13 @@
 Sandra learned:
 
+21.02.25
+
+**CMD git specific commands**  
+- git checkout *Blank* (moves you into a branch named *Blank*)
+
+---
+
+20.02.25
 Markdown (symbols and commands for text formatting)  
 - Point
   - Indented point  

@@ -1,4 +1,4 @@
-Life Organizer  
+TaskaDoo  
 Version: 1.0  
 Author(s): Team Rododendron
 Date: February 18, 2025
@@ -19,7 +19,7 @@ Table of Contents
 App Overview
 ------------------------------------------------------------
 High Concept:  
-Life Organizer is a mobile application designed to assist individuals who struggle with daily organization and time management. By leveraging voice and text inputs, the app helps users plan tasks, create routines, and receive timely reminders to boost productivity and ensure nothing is overlooked.
+TaskaDoo is a mobile application designed to assist individuals who struggle with daily motivation, organization and time management. By leveraging voice and text inputs, the app helps users plan tasks, create routines, and receive timely reminders to boost productivity and ensure nothing is overlooked.
 
 Genre:  
 Productivity / Personal Organization

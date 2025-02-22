@@ -28,9 +28,9 @@ List of tasks we are going to accomplish in the first stage of TaskaDoo Developm
    1. - [ ] Set up a project.
    2. - [x] Establish a Git repository with a basic branching strategy.
 2. - [ ] **CI/CD Pipeline Configuration:**
-   - - [ ] Implement continuous integration using tools like GitHub Actions or CircleCI for automated builds and tests.
+   -  Implement continuous integration using tools like GitHub Actions or CircleCI for automated builds and tests.
 3. - [ ] **Coding Standards & Documentation:**
-   - - [ ] Define code style guidelines and documentation practices for the team.
+   -  Define code style guidelines and documentation practices for the team.
   
 
 ## 3. Core Feature Development
@@ -42,7 +42,7 @@ List of tasks we are going to accomplish in the first stage of TaskaDoo Developm
    1. - [ ] Develop calendar view components.
    2. - [ ] Implement logic to integrate tasks with calendar events and assign scheduling priorities.
 3. - [ ] **State Management Implementation:**
-   - - [ ] Ensure robust state management for tasks, user settings, and notifications.
+   -  Ensure robust state management for tasks, user settings, and notifications.
 
 
 

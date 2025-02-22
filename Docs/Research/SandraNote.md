@@ -4,11 +4,13 @@ Sandra learned:
 
 21.02.25
 
+**Markdown**
 - <!-- Add comment to a line --> ctrl / *lub* Ctrl K C (w tej kolejności)\
   Adds a comment to a line for easier search\
   *Invisible in Plain Text*
 - Ctrl Shift F  
     Search all files for keywords *Those added in comments like above*
+*Shortcuts specifically for Visual Code Studio*
 
 - Table
   

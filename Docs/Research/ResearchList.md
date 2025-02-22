@@ -1,5 +1,5 @@
 # Research Topics Organized by Category
-
+ 
 ## 1. Market & User Research
 - **Competitor Analysis**:  
   - Study existing productivity and task management apps.

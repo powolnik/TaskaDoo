@@ -1,0 +1,1 @@
+Tasks are scheduled based on calendar events and/ or priority levels.

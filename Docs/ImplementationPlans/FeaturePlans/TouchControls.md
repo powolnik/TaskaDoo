@@ -1,0 +1,1 @@
+Swipe/tap navigation and button-based task management.

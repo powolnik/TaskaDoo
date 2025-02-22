@@ -1,0 +1,1 @@
+AI sorts tasks by date, time, priority, and category.

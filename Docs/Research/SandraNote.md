@@ -10,6 +10,7 @@ Sandra learned:
   *Invisible in Plain Text*
 - Ctrl Shift F  
     Search all files for keywords *Those added in comments like above*\
+  
 *Shortcuts specifically for Visual Code Studio*
 
 - Table

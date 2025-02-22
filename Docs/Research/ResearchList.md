@@ -46,16 +46,6 @@
   - Examine scheduling strategies for adaptive reminders (e.g., notifications at 30, 15, and 5 minutes).
 
 > **Scheduling logic**
-> - Task Prioritization and Ordering:
-> 
-> Tasks can be ordered based on user-defined or system-assigned priorities. Factors such as deadlines and the estimated duration of each task should also be taken into account. Additionally, user preferences (like preferred start times or designated quiet hours) should influence the order in which tasks are scheduled.
-> - Notification Scheduling:
->
-> The system should be designed to adjust these reminders dynamically if a task is postponed, completed, or if the user interacts with a notification.
-> - Conflict Resolution and Optimization:
-> 
-> The scheduling logic must detect overlapping tasks and decide whether to merge, prioritize, or prompt the user to reschedule. If a task is delayed or modified, the system should recalculate the schedule to ensure that all tasks are accommodated without causing confusion or overlap.
-
 
 ## 4. UI/UX Design & Accessibility
 - **Design Principles**:  

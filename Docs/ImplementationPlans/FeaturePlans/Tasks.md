@@ -31,5 +31,14 @@ If multiple Tasks have the same Priority, soonest Time and Date is on top.
 1. Category\
 *Might skip if we add another tab for seeing Tasks sorted by Category*
 
+### 5. Scheduling logic
+
+Proposed by AI:
+> - Conflict Resolution and Optimization:
+> 
+> The scheduling logic must detect overlapping tasks and decide whether to merge, prioritize, or prompt the user to reschedule. If a task is delayed or modified, the system should recalculate the schedule to ensure that all tasks are accommodated without causing confusion or overlap.
+
 Proposed by AI:
 > Tasks can be ordered based on user-defined or system-assigned priorities. Factors such as deadlines and the estimated duration of each task should also be taken into account. Additionally, user preferences (like preferred start times or designated quiet hours) should influence the order in which tasks are scheduled.
+
+

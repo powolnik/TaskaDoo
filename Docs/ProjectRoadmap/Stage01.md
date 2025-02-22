@@ -1,0 +1,1 @@
+List of tasks we are going to accomplish in the first stage of TaskaDoo Development.

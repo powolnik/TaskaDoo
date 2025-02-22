@@ -42,12 +42,12 @@
 ## 3. Technical Architecture & Technology Stack (2–3 Weeks)
 ### Tasks
 - **Framework & Libraries Selection**:  
-  - Choose React Native as the main framework.
+  - Choose .
   - Select supporting libraries:
-    - **Navigation**: `React Navigation`
-    - **State Management**: Redux or Context API
-    - **Voice Recognition**: `react-native-voice`
-    - **Local Notifications**: `react-native-push-notification`
+    - **Navigation**: 
+    - **State Management**: 
+    - **Voice Recognition**: 
+    - **Local Notifications**: 
 - **Architecture Design**:  
   - Create a system architecture diagram covering key modules (voice input, AI processing, calendar, notifications).
 - **Integration Planning**:  
@@ -67,8 +67,8 @@
 ## 4. Set Up Development Environment (1–2 Weeks)
 ### Tasks
 - **Project Initialization**:  
-  - Set up a new React Native project (using React Native CLI).
-  - Establish a Git repository with a clear branching strategy.
+  - Set up a project.
+  - Establish a Git repository with a clear branching strategy. [x]
 - **CI/CD Pipeline Configuration**:  
   - Implement continuous integration using tools like GitHub Actions or CircleCI for automated builds and tests.
 - **Coding Standards & Documentation**:  
@@ -76,7 +76,7 @@
 
 ### Research Focus
 - **Tooling & Best Practices**:  
-  - Review modern React Native project structures.
+  - Review differend kinds of programistic ecosystems and frameworks.
   - Research CI/CD best practices specifically for mobile app development.
 
 ---
@@ -85,7 +85,7 @@
 ### Tasks
 - **Task Input & Categorization Module**:  
   - Implement both voice and text input components.
-  - Integrate the chosen NLP module to parse input and auto-categorize tasks (assigning date, time, priority, and color coding).
+  - Integrate the chosen NLP modumarkdole to parse input and auto-categorize tasks (assigning date, time, priority, category and color coding).
 - **Calendar & Scheduling Integration**:  
   - Develop calendar view components.
   - Implement logic to integrate tasks with calendar events and assign scheduling priorities.

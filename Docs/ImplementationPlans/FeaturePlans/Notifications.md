@@ -18,9 +18,10 @@
 >
 >    - `Yes`\
 >    *Window with bellow buttons pops up:*
->       > `Date: ` `Time: `\
->       `Ok`\
->   *Time can be left blank*
+>> |`Date: `|   |`Time: `|
+>> |--------|---|--------|
+>> |        |`Ok`|       |
+>> *Time can be left blank*
 >
 >    - `No`\
 >*Time and Date attributes are not assigned, Task remains incompleted*
@@ -33,3 +34,5 @@ When:
 
 ### 4. **DO NOT OVERUSE** notifications for other things
 It will lead to some users ignoring Task reminders
+
+

@@ -1,1 +1,0 @@
-## Contains whole documentation of the project.

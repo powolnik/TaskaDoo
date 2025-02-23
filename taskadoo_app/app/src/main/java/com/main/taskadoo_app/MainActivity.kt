@@ -1,27 +1,10 @@
 package com.main.taskadoo_app
 
 import androidx.activity.ComponentActivity
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.ParagraphStyle
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import android.os.Bundle
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.material3.Text
-import androidx.compose.ui.text.withStyle
+import com.main.taskadoo_app.src.Note
+import com.main.taskadoo_app.src.NotesListComposable
 import com.main.taskadoo_app.ui.theme.ComposeTestTheme
 
 //region MainActivity
@@ -29,20 +12,20 @@ import com.main.taskadoo_app.ui.theme.ComposeTestTheme
     class MainActivity : ComponentActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
-            enableEdgeToEdge()
             setContent {
                 ComposeTestTheme {
-                    FColumnsPreview()
+                    NotesListComposable(notes = listOf(Note("Note 1", "This is note 1"), Note("Note 2", "This is note 2")))
                 }
             }
         }
     }
 //endregion
+/*
 
 //region Composable
     // Composable function that displays styled text
     @Composable
-    fun FText(color: Color = MaterialTheme.colorScheme.error, inputText: String = "Default") {
+    fun FText(color: Color = MaterialTheme.colorScheme.error, inputText: String = "DEFAULT") {
         if (inputText.isEmpty()) {
             // Error handling for empty input text
             throw IllegalArgumentException("Input text cannot be empty")
@@ -62,17 +45,8 @@ import com.main.taskadoo_app.ui.theme.ComposeTestTheme
         )
     }
 
-    //uses FText to display a title
+    // FButton uses FText to display a title
     // Composable function that creates a button within the column scope
-    @Composable
-    fun FButton(text: String = "DEFAULT") {
-        if (text.isEmpty()) {
-            // Error handling for empty button text
-            throw IllegalArgumentException("Button text cannot be empty")
-        }
-        FText(MaterialTheme.colorScheme.onPrimary, text)
-    }
-
     // FColumns uses FSurface to create a surface within a column scope
     // Composable function that creates a column layout with two surfaces
     @Composable
@@ -86,15 +60,16 @@ import com.main.taskadoo_app.ui.theme.ComposeTestTheme
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.SpaceEvenly
         ) {
-            FSurface(MaterialTheme.colorScheme.primary)
-            FSurface(MaterialTheme.colorScheme.primary)
+            FSurface(MaterialTheme.colorScheme.primaryContainer)
+            FSurface(MaterialTheme.colorScheme.surfaceVariant)
+            //for
         }
     }
 
     // FSurface uses FButton to create a button within a surface scope
     // Composable function that creates a surface within a column scope
     @Composable
-    fun ColumnScope.FSurface(color: Color, weight: Float = 1f) {
+    fun ColumnScope.FSurface(color: Color = MaterialTheme.colorScheme.primary, weight: Float = 1f) {
         Surface(
             modifier = Modifier
                 .width(200.dp)
@@ -104,6 +79,14 @@ import com.main.taskadoo_app.ui.theme.ComposeTestTheme
         ) {
             FButton("Button")
         }
+    }
+    @Composable
+    fun FButton(text: String = "DEFAULT EXCEPTIION TEXT") {
+        if (text.isEmpty()) {
+            // Error handling for empty button text
+            throw IllegalArgumentException("Button text cannot be empty")
+        }
+        FText(MaterialTheme.colorScheme.onPrimary, text)
     }
 //endregion
 
@@ -116,4 +99,4 @@ import com.main.taskadoo_app.ui.theme.ComposeTestTheme
             FColumns()
         }
     }
-//endregion
+//endregion*/

@@ -3,6 +3,7 @@
 > Essential for Taskadoo.
 
 ### 1. Used as Tasks reminders 
+> Look into MyTherapy app, this bitch so relentlessly annoying it succesfully makes me take my meds
 
 ### 2. Four response options
    1. `Did it!`\

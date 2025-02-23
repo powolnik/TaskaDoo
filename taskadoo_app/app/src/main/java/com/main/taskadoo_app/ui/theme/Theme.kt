@@ -37,7 +37,7 @@ private val LightColorsPallet = lightColorScheme(
     onSurface = BlueLight,
     surfaceVariant = GreenDark,
     onSurfaceVariant = BlueLight,
-    surfaceTint = PurpleLight,
+    surfaceTint = GreenLight,
     inverseSurface = BlueLight,
     error = Error
 )

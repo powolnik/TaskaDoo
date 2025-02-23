@@ -4,19 +4,19 @@ import androidx.compose.ui.graphics.Color
 
 //region LightTheme
     val PurpleLight = Color(0xFFD0BCFF)
-    val PurpleGreyLight = Color(0xFFCCC2DC)
-    val PinkLight = Color(0xFFEFB8C8)
+    val PurpleGreyLight = Color(0xFF4600BD)
+    val PinkLight = Color(0xFFFFC8CC)
 
     // Accent colors
-    val BlueLight = Color(0xFF82B1FF)
-    val GreenLight = Color(0xFFA5D6A7)
-    val YellowLight = Color(0xFFFFF176)
+    val BlueLight = Color(0xFFA5FFF7)
+    val GreenLight = Color(0xFFFFD98F)
+    val YellowLight = Color(0xFFFFB28A)
 
     // Background and surface
-    val BackgroundLight = Color(0xFFFFFBFE)
-    val SurfaceLight = Color(0xFFFFFBFE)
-    val OnPrimaryLight = Color(0xFF000000)
-    val OnSecondaryLight = Color(0xFF000000)
+    val BackgroundLight = Color(0xFFFDF6FC)
+    val SurfaceLight = Color(0xFFFDF6FC)
+    val OnPrimaryLight = Color(0xFF3D4767)
+    val OnSecondaryLight = Color(0xFF5968A7)
 //endregion
 
 //region DarkTheme
@@ -42,5 +42,5 @@ import androidx.compose.ui.graphics.Color
     val OnSecondary  = Color(0xFFFFFFFF)
     val OnBackground  = Color(0xFFE6E1E5)
     val OnSurface  = Color(0xFFE6E1E5)
-    val Error  = Color(0xFFFFFFFF)
+    val Error  = Color(0xFFEC9A9A)
 //endregion

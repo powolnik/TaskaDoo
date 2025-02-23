@@ -3,89 +3,117 @@ package com.main.taskadoo_app
 
 import android.os.Bundle
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.sp
 import androidx.compose.ui.graphics.Color
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.material3.Text
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.withStyle
+import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.ParagraphStyle
+import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.unit.TextUnit
-import com.main.taskadoo_app.ui.theme.Taskadoo_appTheme
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.main.taskadoo_app.ui.theme.ComposeTestTheme
 
-var FontSize: TextUnit = 0.sp
-var FontSizeMuliplier: Float = 0.4F
-var DispText: String = "Default"
 
+//region MainActivity
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (FontSize <= 0.sp) {
-            DispText = "TextSize \n\nzainicjuj \n\nbalwanie"
-            FontSize = 90.sp
-        }
         enableEdgeToEdge()
         setContent {
-            Taskadoo_appTheme {
-                Column {
-                    GreetingText(
-                    )
-                }
+            ComposeTestTheme {
+                FCollumnsPreview()
             }
         }
     }
 }
+//endregion
 
-@Preview(showBackground = true)
+/*region Composable*/
 @Composable
-fun GreetingTextPreview() {
-    GreetingText()
-}
-
-@Composable
-fun Greeting(name: String = DispText, modifier: Modifier = Modifier) {
-    Text(
-        buildAnnotatedString {
-            withStyle(style = ParagraphStyle(lineHeight = FontSize)) {
-                withStyle(style = SpanStyle(color = Color.Red, fontSize = FontSize)) {
-                    append("$name.")
-                }
-            }
+fun FColumns(){
+    var color = MaterialTheme.colorScheme
+    ComposeTestTheme {
+        Column ( modifier = Modifier
+            .fillMaxSize()
+            .height(500.dp)
+            .height(500.dp)
+            .background(color.background),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.SpaceEvenly) {
+            FSurface(Color.Magenta)
+            FSurface(Color.Blue)
         }
-    )
-}
-
-@Composable
-fun GreetingText(name: String = DispText) {
-    var FontColor: Color = Color.Cyan
-    Column {
-        Greeting("Radek")
-        Text(
-            buildAnnotatedString {
-                withStyle(style = ParagraphStyle(lineHeight = FontSize*FontSizeMuliplier)) {
-                    withStyle(
-                        style = SpanStyle(
-                            fontSize = FontSize/FontSizeMuliplier*FontSizeMuliplier,
-                            fontWeight = FontWeight.ExtraBold,
-                            color = FontColor
-                        )
-                    ) {
-                        if (FontWeight.equals(FontWeight.ExtraBold)) {
-                            FontColor = Color.Red
-                        }
-                        append("$name!")
-                    }
-                }
-            }
-        )
     }
 }
+
+@Composable
+fun ColumnScope.FSurface(color: Color, weight: Float = 1f){
+    Surface(modifier = Modifier
+        .width(200.dp)
+        .weight(weight)
+        .wrapContentHeight(Alignment.CenterVertically),
+        color = color){
+        FText()
+    }
+}
+
+@Composable
+fun FText(color: Color = MaterialTheme.colorScheme.error,inputText: String = "Default") {
+    Text( buildAnnotatedString {
+        withStyle(style = ParagraphStyle(textAlign = TextAlign.Center, )){
+            withStyle(style = SpanStyle(
+                color = color,
+                fontSize = 30.sp,
+                fontWeight = FontWeight.Bold)) {
+                append("$inputText")
+            }
+        }
+    })
+}
+
+@Composable
+fun FBox(align: Alignment){
+    Box(modifier = Modifier.fillMaxSize(),
+        contentAlignment = align
+    ){
+        Box(
+            modifier = Modifier
+                .background(Color.Blue)
+        ){
+            FText(Color.Cyan,"TextFrom FBOX")
+        }
+    }
+}
+
+//endregion
+
+//region Composable Preview
+    @Preview(showBackground = true)
+    @Composable
+    fun FCollumnsPreview(){
+        ComposeTestTheme {
+            FColumns()
+        }
+    }
+//endregion
 
 

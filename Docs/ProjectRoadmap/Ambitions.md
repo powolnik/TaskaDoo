@@ -42,9 +42,9 @@ An important focus of this project is for everyone involved to work on and learn
 2. - [ ] Utilitarian execution (for now)
 3. - [ ] Tasks Tab
    1. - [ ] Tasks list
-   2. - [ ] Add Task Button
-   3. - [ ] Delete Task
-   4. - [ ] Edit Task
+   2. - [ ] `Add Task` Button
+   3. - [ ] `Delete Task` Button
+   4. - [ ] `Edit Task` Button
 5. - [ ] Add Task window\
 (remember we'll need to add space for Date, Time, Priority, Categorization and Color later)
    1. - [ ] Input Text Panel

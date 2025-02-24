@@ -1,12 +1,15 @@
-Reactive Native\
-Kotlin\
-QT
+# Kotlin
+~~Reactive Native~~\
+~~QT~~
 
+
+### Kotlin tutorials:
+- [Kotlin Newbie To Pro](https://www.youtube.com/watch?v=QsrQV0wXh2E&list=PLQkwcJG4YTCRSQikwhtoApYs9ij_Hc5Z9&index=2)
 ---
 ---
 ---
 
-# Podsumowanie dla 5latka od AI
+# Podsumowanie dla 5latka od AI nt. różnych Frameworków
 
 ## Podsumowanie porównania frameworków: React Native, Kotlin i Qt (dla aplikacji organizacyjnej z AI)
 
@@ -81,7 +84,7 @@ Podsumowując, każde z tych narzędzi ma swoje mocne i słabe strony. Wybór za
 ---
 
 
-# Detailed comparision
+# Detailed comparision of React Native, Kotlin and Qt
 
 ## React Native
 

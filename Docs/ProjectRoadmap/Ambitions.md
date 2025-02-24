@@ -50,7 +50,7 @@ An important focus of this project is for everyone involved to work on and learn
    1. - [ ] Input Text Panel
    2. - [ ] `Okay` Button
    3. - [ ] `Cancel` Button
-6. - [ ] 4 tabs (can be empty besides Tasks)
+6. - [ ] 3 tabs (can be empty besides Tasks)
 7. - [ ] Basic icons
 
 #### **4. Documentation**

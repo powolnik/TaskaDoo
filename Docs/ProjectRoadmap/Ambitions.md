@@ -41,18 +41,17 @@ An important focus of this project is for everyone involved to work on and learn
    2. - [ ] Style
 2. - [ ] Utilitarian execution (for now)
 3. - [ ] Tasks Tab
-4. - [ ] Buttons
-   1. - [ ] Add Task
-   2. - [ ] Delete Task
-   3. - [ ] Edit Task
+   1. - [ ] Tasks list
+   2. - [ ] Add Task Button
+   3. - [ ] Delete Task
+   4. - [ ] Edit Task
 5. - [ ] Add Task window\
 (remember we'll need to add space for Date, Time, Priority, Categorization and Color later)
-   1. - [ ] Insert Text Window 
+   1. - [ ] Input Text Panel
    2. - [ ] `Okay` Button
    3. - [ ] `Cancel` Button
-6. - [ ] Tasks list
-7. - [ ] 4 tabs (can be empty besides Tasks)
-8. - [ ] Basic icons
+6. - [ ] 4 tabs (can be empty besides Tasks)
+7. - [ ] Basic icons
 
 #### **4. Documentation**
 1. - [ ] Organizing dicumentation

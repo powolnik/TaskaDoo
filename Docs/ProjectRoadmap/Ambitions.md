@@ -54,7 +54,7 @@ An important focus of this project is for everyone involved to work on and learn
 7. - [ ] Basic icons
 
 #### **4. Documentation**
-1. - [ ] Organizing dicumentation
+1. - [ ] Organizing documentation
 2. - [ ] Each Feature sufficient description
 3. - [ ] Basic Project Roadmap
 4. - [ ] Stage01 plan

@@ -1,4 +1,3 @@
-Users can add tasks using voice dictation or text.
 # Task Input
 
 Inputting Tasks should be as **easy and fast** as possible, because we don't want to make this into another hurdle. That could stop users from inputting Tasks which would render TaskaDoo useless.\
@@ -44,7 +43,7 @@ This is why we plan to implement 2 ways of doing that. Through text and voice co
     > **U:** Yup, can you create one for a date with Jennifer on 23rd of February? 30 minutes after 3PM\
     > **T:** I can but you have a Doctor Appointment on 4PM that day. Will you make it on time?\
     > **U:** Oh f*ck! Can you create a Quest for cancelling a date with Jennifer in 2 hours?\
-    > **T:** Done! Caegory: Relationships. How high is the priority?\
+    > **T:** Done! Category: Relationships. How high is the priority?\
     > **U:** Very high! And make it red too...\
     > **T:** Alright
 

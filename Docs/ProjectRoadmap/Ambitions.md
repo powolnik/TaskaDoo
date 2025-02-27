@@ -30,6 +30,7 @@ An important focus of this project is for everyone involved to work on and learn
 1. - [ ] Touch Controls
 2. - [ ] Working Buttons
 3. - [ ] Text Input
+   1. - [ ] Text Input Panel
 4. - [ ] Tasks
 5. - [ ] Task Input
 6. - [ ] Tasks Categories

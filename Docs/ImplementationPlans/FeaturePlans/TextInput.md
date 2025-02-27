@@ -1,6 +1,6 @@
 # Text Input
-Even though voice Task input is an important feature of TaskaDoo, ability to input Tasks through text is vry important as well.\
-That's because not every User will feel comfortable with saying their Task out loud even at their own home (family, roommates - other people in general). Besides, it might not be apropriate in public. 
+Even though voice Task input is an important feature of TaskaDoo, ability to input Tasks through text is very important as well.\
+That's because not every User will feel comfortable saying their Task out loud even at their own home (family, roommates - other people in general). Besides, it might not be appropriate in public. 
 
 ### 1. Use of build-in Android and IOS keyboards
 

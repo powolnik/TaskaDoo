@@ -27,8 +27,9 @@ An important focus of this project is for everyone involved to work on and learn
 4. - [ ] Task management styles
    
 #### **3. Functionalities**
-1. - [ ] Touch Controls
-2. - [ ] Working Buttons
+** What something does"
+e.g. saving/loadng notes, displaying notes *research most basic functionalities of mobile apps*
+
 3. - [ ] Text Input
    1. - [ ] Text Input Panel
 4. - [ ] Tasks

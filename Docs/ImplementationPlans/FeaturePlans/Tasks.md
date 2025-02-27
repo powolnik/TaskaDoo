@@ -5,6 +5,13 @@
 >
 Allows users to plan their day, week, life. Thanks to this feature, they won't forget about anything important, whether it's a doctor appointment, yoga routine or their moms birthday.
 
+#### Propositions
+
+1. **STATUS: AGREED/ DENIED** Ability to add descriptions
+2. **STATUS: AGREED/ DENIED** Ability to add subtasks (look into game quests and their step-by-steps)
+3. **STATUS: AGREED/ DENIED** Ability to add adress and synchronization with Google Maps /and Apple Maps (for easy starting the route on those apps)
+
+
 ### 1. Input
 1. Text
 2. Voice

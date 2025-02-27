@@ -15,11 +15,12 @@ import androidx.compose.ui.unit.dp
 fun Button() {
     Button(
         modifier = Modifier.padding(8.dp),
-
+        colors = ButtonDefaults.buttonColors(
+            containerColor = MaterialTheme.colorScheme.primary,
+            contentColor = MaterialTheme.colorScheme.onPrimary),
         onClick = {
 
         }
-
     ) {
         Text("Click me")
     }

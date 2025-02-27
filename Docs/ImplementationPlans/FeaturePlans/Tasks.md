@@ -1,4 +1,4 @@
-## Tasks 
+# Tasks 
 (called "Quests" in app) 
 
 > Most important feature of TaskaDoo.

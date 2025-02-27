@@ -23,7 +23,7 @@ import com.main.taskadoo_app.ui.theme.ComposeTestTheme
                 }
             }
         }
-    }
+}
 //endregion
 
 /*//region Composable

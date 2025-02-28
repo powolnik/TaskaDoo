@@ -36,7 +36,7 @@ fun NoteComposable(note: Note) {
                 .padding(top = 16.dp),
             horizontalArrangement = Arrangement.Center
         ) {
-            Button()
+            TDButton()
         }
     }
 }

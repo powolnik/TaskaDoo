@@ -1,20 +1,19 @@
 package com.main.taskadoo_app.src
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun TDButton(name: String = "DEFAULT",
@@ -29,20 +28,43 @@ fun TDButton(name: String = "DEFAULT",
 
         }
     ) {
-        Text(name)
+        TDText(name, content_color, container_color)
     }
 }
 
-//@Preview(showBackground = true)
-//@Composable
-//fun TDButtonPreview() {
-//    TDButton(name = "BlaBla", container_color = Color.Black, content_color = Color.Cyan)
-//}
+@Composable
+fun TDText(text: String,
+           textColor: Color = Color.White,
+           backgroundColor: Color = Color.DarkGray,
+           fontSize: TextUnit = 28.sp)
+{
+    Text(text = text,
+        modifier = Modifier
+            .padding(2.dp)
+            .background(shape = RectangleShape,
+                color = backgroundColor),
+        color = textColor,
+        fontSize = fontSize)
+}
 
+@Preview()
+@Composable
+fun Preview() {
+//    TDText("s")
+    TDButton()
+}
+
+
+
+
+
+/*
 @Composable
 fun TDColumn(){
     Column(modifier = Modifier
-        /*.weight(1f)*/
+        */
+/*.weight(1f)*//*
+
         .padding(end = 8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceEvenly
@@ -52,11 +74,11 @@ fun TDColumn(){
     }
 }
 
-//@Preview(showBackground = true)
-//@Composable
-//fun TDColumnPreview(){
-//    TDColumn()
-//}
+@Preview(showBackground = true)
+@Composable
+fun TDColumnPreview(){
+    TDColumn()
+}
 
 @Composable
 fun TDRow(row_count: Int){
@@ -87,4 +109,4 @@ fun CxR(column_count: Int = 1, row_count: Int = 1){
 fun MainPreview(){
     CxR(2, 1)
 }
-
+*/

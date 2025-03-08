@@ -1,0 +1,25 @@
+Index: .idea/modules/app/taskadoo_app.app.iml
+===================================================================
+diff --git a/.idea/modules/app/taskadoo_app.app.iml b/.idea/modules/app/taskadoo_app.app.iml
+deleted file mode 100644
+--- a/.idea/modules/app/taskadoo_app.app.iml	(revision 298169621df5f99fdf8c61db387f65d5690bc26d)
++++ /dev/null	(revision 298169621df5f99fdf8c61db387f65d5690bc26d)
+@@ -1,17 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module version="4">
+-  <component name="ModuleClassLoaderOverlays">
+-    <paths>
+-      <option value="C:\Users\ADMINI~1\AppData\Local\Temp\overlay890801244696606676" />
+-      <option value="C:\Users\ADMINI~1\AppData\Local\Temp\overlay7855140926635609411" />
+-      <option value="C:\Users\ADMINI~1\AppData\Local\Temp\overlay13451132004331463326" />
+-      <option value="C:\Users\ADMINI~1\AppData\Local\Temp\overlay9489588088159760514" />
+-      <option value="C:\Users\ADMINI~1\AppData\Local\Temp\overlay11551206678060869212" />
+-      <option value="C:\Users\ADMINI~1\AppData\Local\Temp\overlay1927977053130815735" />
+-      <option value="C:\Users\ADMINI~1\AppData\Local\Temp\overlay1990451010259316070" />
+-      <option value="C:\Users\ADMINI~1\AppData\Local\Temp\overlay11174409575722224242" />
+-      <option value="C:\Users\ADMINI~1\AppData\Local\Temp\overlay16477712447100241100" />
+-      <option value="C:\Users\ADMINI~1\AppData\Local\Temp\overlay5849595813395569379" />
+-    </paths>
+-  </component>
+-</module>
+\ No newline at end of file

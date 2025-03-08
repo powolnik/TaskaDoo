@@ -21,7 +21,8 @@ private val DarkColorsPallet = darkColorScheme(
     onSurfaceVariant = BlueDark,
     surfaceTint = GreenLight,
     inverseSurface = BlueDark,
-    error = Error
+    error = Error,
+    background = GreenDark,
 )
 
 private val LightColorsPallet = lightColorScheme(
@@ -37,9 +38,10 @@ private val LightColorsPallet = lightColorScheme(
     onSurface = BlueLight,
     surfaceVariant = GreenDark,
     onSurfaceVariant = BlueLight,
-    surfaceTint = PurpleLight,
+    surfaceTint = GreenLight,
     inverseSurface = BlueLight,
-    error = Error
+    error = Error,
+    background = GreenLight
 )
 
 @Composable

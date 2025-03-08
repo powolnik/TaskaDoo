@@ -55,7 +55,7 @@ fun TDText(
     text: String,
     textColor: Color = Color.White,
     backgroundColor: Color = Color.DarkGray,
-    fontSize: TextUnit = 28.sp
+    fontSize: TextUnit = 25.sp
 ) {
     Text(
         text = text,
@@ -79,7 +79,6 @@ fun TDRow(row_count: Int) {
         horizontalArrangement = Arrangement.SpaceBetween
     )
     {
-
         for (i in 1..row_count) {
             TDButton(onClickAction = {
                 println("from row")
@@ -102,8 +101,7 @@ fun CxR(row_count: Int = 1, column_count: Int = 1) {
 @Preview(showBackground = true)
 @Composable
 fun MainPreview() {
-
-    CxR(3, 4)
+    CxR(3, 2)
 }
 
 //@Preview()

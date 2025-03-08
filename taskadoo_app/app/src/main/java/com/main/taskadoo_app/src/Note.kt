@@ -50,7 +50,7 @@ fun NoteItem(
             {
                 Text(note.content)
             }
-                TDButton(onClickAction = { println("t") })
+                TDButton(onClickAction = { println("OnClick from NoteItem") })
         }
     }
 }

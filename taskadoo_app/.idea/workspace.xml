@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d50c7e66-671a-4938-8294-1714ba206d75" name="Changes" comment="" />
+    <list default="true" id="fb0cac2d-6202-4bde-bc95-6d686c250abf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\Administrator\.android\avd\Medium_Phone.avd)]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -46,6 +64,17 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -54,9 +83,59 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{}]]></component>
-  <component name="RunManager" selected="Android App.MainActivity">
-    <configuration name="MainActivity (2)" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" temporary="true">
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;powolnik&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/powolnik/TaskaDoo.git&quot;,
+    &quot;accountId&quot;: &quot;be274ae9-090c-4a73-afaa-7de749429c39&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="com.main.taskadoo_app.MainActivityKt.FCollumnsPreview" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2tNTMyU835HvCYxxOqDbzHomOPk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Android App.LoginScreen (1).executor": "Run",
+    "Android App.LoginScreen (2).executor": "Run",
+    "Android App.MainActivity (1).executor": "Run",
+    "Android App.MainActivity (2).executor": "Run",
+    "Android App.MainActivity (3).executor": "Run",
+    "Android App.MainActivity (4).executor": "Run",
+    "Android App.MainActivity.executor": "Run",
+    "Android App.app.executor": "Run",
+    "ApkExportedModule": "taskadoo_app.app",
+    "Compose Preview.GreetingTextPreview.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "settings.codegpt.services.ollama"
+  }
+}]]></component>
+  <component name="RunManager" selected="Android App.MainActivity (1)">
+    <configuration name="LoginScreen (1)" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" temporary="true">
       <module name="taskadoo_app.app" />
       <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
       <option name="DEPLOY" value="true" />
@@ -120,14 +199,14 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY" value="" />
-      <option name="ACTIVITY_CLASS" value="com.main.taskadoo_app.MainActivity" />
+      <option name="ACTIVITY_CLASS" value="com.main.taskadoo_app.LoginScreen" />
       <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainActivity (3)" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" temporary="true">
+    <configuration name="LoginScreen (2)" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" temporary="true">
       <module name="taskadoo_app.app" />
       <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
       <option name="DEPLOY" value="true" />
@@ -191,14 +270,85 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY" value="" />
-      <option name="ACTIVITY_CLASS" value="com.main.taskadoo_app.MainActivity" />
+      <option name="ACTIVITY_CLASS" value="com.main.taskadoo_app.LoginScreen" />
       <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainActivity (4)" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" temporary="true">
+    <configuration name="LoginScreen" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="taskadoo_app.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="specific_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="com.main.taskadoo_app.LoginScreen" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainActivity (1)" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" temporary="true">
       <module name="taskadoo_app.app" />
       <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
       <option name="DEPLOY" value="true" />
@@ -340,7 +490,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GreetingTextPreview" type="ComposePreviewRunConfiguration" temporary="true">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="taskadoo_app.app" />
       <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
       <option name="DEPLOY" value="true" />
@@ -353,8 +503,8 @@
       <option name="ALLOW_ASSUME_VERIFIED" value="false" />
       <option name="CLEAR_APP_STORAGE" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="--es composable com.main.taskadoo_app.MainActivityKt.GreetingTextPreview" />
-      <option name="MODE" value="specific_activity" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
       <option name="RESTORE_ENABLED" value="false" />
       <option name="RESTORE_FILE" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
@@ -404,25 +554,132 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY" value="" />
-      <option name="ACTIVITY_CLASS" value="androidx.compose.ui.tooling.PreviewActivity" />
-      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="true" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
-      <compose-preview-run-configuration composable-fqn="com.main.taskadoo_app.MainActivityKt.GreetingTextPreview" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Compose Preview.GreetingTextPreview" />
-        <item itemvalue="Android App.MainActivity (4)" />
-        <item itemvalue="Android App.MainActivity (3)" />
-        <item itemvalue="Android App.MainActivity (2)" />
+        <item itemvalue="Android App.MainActivity (1)" />
         <item itemvalue="Android App.MainActivity" />
+        <item itemvalue="Android App.LoginScreen (2)" />
+        <item itemvalue="Android App.LoginScreen (1)" />
+        <item itemvalue="Android App.LoginScreen" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb0cac2d-6202-4bde-bc95-6d686c250abf" name="Changes" comment="" />
+      <created>1740191491044</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740191491044</updated>
+    </task>
+    <task id="LOCAL-00001" summary="first app compilations">
+      <option name="closed" value="true" />
+      <created>1740197978808</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740197978808</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Jetpack familiarized, ive get some control over @Composable s">
+      <option name="closed" value="true" />
+      <created>1740209690514</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740209690515</updated>
+    </task>
+    <task id="LOCAL-00003" summary="This commit is preety important, CodeAndSyntax samples">
+      <option name="closed" value="true" />
+      <created>1740282827063</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740282827063</updated>
+    </task>
+    <task id="LOCAL-00004" summary="refactor(ui): update color values and add error handling in composable functions">
+      <option name="closed" value="true" />
+      <created>1740290108607</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740290108607</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update theme with new background colors, create notes list composable, add Note data class, update MainActivity to display notes, and adjust .gitignore to ignore caches.">
+      <option name="closed" value="true" />
+      <created>1740306396752</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740306396752</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Refactor Button composable to use MaterialTheme colors and remove redundant imports&#10;&#10;Remove unused imports in NoteComposable.kt&#10;&#10;Update NoteManager to use Modifier instead of inline modifier&#10;&#10;Update MainActivity.kt to use the new NoteListScreen and NoteItem composables&#10;&#10;Remove unused imports and update imports in NoteItem composable&#10;&#10;Remove unused imports in EditNoteScreen composable&#10;&#10;Remove unused imports in NoteListScreen composable&#10;&#10;Remove unused imports in NoteComposable.kt&#10;&#10;Remove unused imports in Button composable">
+      <option name="closed" value="true" />
+      <created>1740671865569</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740671865569</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add button colors using MaterialTheme, introduce NoteItem composable for displaying notes with title, content, and action button, replace NotesListComposable with NoteItem in MainActivity">
+      <option name="closed" value="true" />
+      <created>1740675864530</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740675864530</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Rename Button.kt to BasicTypes.kt, create TDText composable with custom styling, update Note.kt to use clickable Card with title and content layout, modify NoteComposable to use TDButton, add deployment target for MainActivity in IDE settings">
+      <option name="closed" value="true" />
+      <created>1740702126583</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740702126583</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Rename Button.kt to BasicTypes.kt, create TDText composable with custom styling, update Note.kt to use clickable Card with title and content layout, modify NoteComposable to use TDButton, add deployment target for MainActivity in IDE settings">
+      <option name="closed" value="true" />
+      <created>1740702149662</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1740702149662</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first app compilations" />
+    <MESSAGE value="Jetpack familiarized, ive get some control over @Composable s" />
+    <MESSAGE value="This commit is preety important, CodeAndSyntax samples" />
+    <MESSAGE value="refactor(ui): update color values and add error handling in composable functions" />
+    <MESSAGE value="Update theme with new background colors, create notes list composable, add Note data class, update MainActivity to display notes, and adjust .gitignore to ignore caches." />
+    <MESSAGE value="Refactor Button composable to use MaterialTheme colors and remove redundant imports&#10;&#10;Remove unused imports in NoteComposable.kt&#10;&#10;Update NoteManager to use Modifier instead of inline modifier&#10;&#10;Update MainActivity.kt to use the new NoteListScreen and NoteItem composables&#10;&#10;Remove unused imports and update imports in NoteItem composable&#10;&#10;Remove unused imports in EditNoteScreen composable&#10;&#10;Remove unused imports in NoteListScreen composable&#10;&#10;Remove unused imports in NoteComposable.kt&#10;&#10;Remove unused imports in Button composable" />
+    <MESSAGE value="Add button colors using MaterialTheme, introduce NoteItem composable for displaying notes with title, content, and action button, replace NotesListComposable with NoteItem in MainActivity" />
+    <MESSAGE value="Rename Button.kt to BasicTypes.kt, create TDText composable with custom styling, update Note.kt to use clickable Card with title and content layout, modify NoteComposable to use TDButton, add deployment target for MainActivity in IDE settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename Button.kt to BasicTypes.kt, create TDText composable with custom styling, update Note.kt to use clickable Card with title and content layout, modify NoteComposable to use TDButton, add deployment target for MainActivity in IDE settings" />
+  </component>
+  <component name="play_dynamic_filters_status">
+    <option name="appIdToCheckInfo">
+      <map>
+        <entry key="com.main.taskadoo_app">
+          <value>
+            <CheckInfo lastCheckTimestamp="1741462591339" />
+          </value>
+        </entry>
+        <entry key="com.main.taskadoo_app.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1741462591340" />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

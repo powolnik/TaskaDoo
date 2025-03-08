@@ -1,3 +1,10 @@
 *.iml
 
 
+taskadoo_app/.idea/workspace.xml
+/taskadoo_app/.idea
+/taskadoo_app/app/build
+/taskadoo_app/app/build/intermediates
+/taskadoo_app/app/build/intermediates/apk
+/taskadoo_app/app/build/intermediates/apk/debug
+taskadoo_app/app/build/intermediates/apk/debug/app-debug.apk

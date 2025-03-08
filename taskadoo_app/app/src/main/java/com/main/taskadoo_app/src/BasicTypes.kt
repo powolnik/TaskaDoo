@@ -38,7 +38,7 @@ fun TDButton(
         ),
         onClick = {
             if (onClickAction == null) {
-                Toast.makeText(ctx, "Default", Toast.LENGTH_SHORT).show()
+                Toast.makeText(ctx, "DEFAULT", Toast.LENGTH_SHORT).show()
                 onClickAction?.invoke()
             }
             else {
@@ -81,7 +81,7 @@ fun TDRow(row_count: Int) {
     {
         for (i in 1..row_count) {
             TDButton(onClickAction = {
-                println("from row")
+                println("from BasicTypes.kt from TDRow")
             })
         }
     }

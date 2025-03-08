@@ -3,11 +3,8 @@ package com.main.taskadoo_app
 import androidx.activity.ComponentActivity
 import android.os.Bundle
 import androidx.activity.compose.setContent
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
 import com.main.taskadoo_app.src.Note
 import com.main.taskadoo_app.src.NoteItem
-import com.main.taskadoo_app.src.NotesListComposable
 import com.main.taskadoo_app.src.text
 import com.main.taskadoo_app.ui.theme.ComposeTestTheme
 

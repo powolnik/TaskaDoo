@@ -20,7 +20,7 @@ fun NotesListComposable(notes: List<Note>) {
         verticalArrangement = Arrangement.SpaceEvenly
     ) {
         notes.forEach { note ->
-            NoteComposable(note = note)
+            NoteItem(note = note)
         }
     }
 }

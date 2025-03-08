@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:2:1-34:12
 MERGED from [androidx.compose.material3:material3-android:1.2.1] C:\Users\Administrator\.gradle\caches\8.10.2\transforms\2b611de0532327e7621dea67759736c4\transformed\material3-release\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.compose.material:material-android:1.6.6] C:\Users\Administrator\.gradle\caches\8.10.2\transforms\7e2751c6ed1ca6f8ad832ee663fbf42e\transformed\material-release\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.material:material-icons-core-android:1.6.6] C:\Users\Administrator\.gradle\caches\8.10.2\transforms\946b43b27245285591e87512ab102f06\transformed\material-icons-core-release\AndroidManifest.xml:2:1-7:12
@@ -59,8 +59,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\Adminis
 	xmlns:android
 		ADDED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:5:5-26:19
-INJECTED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:5:5-26:19
+ADDED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:5:5-32:19
+INJECTED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:5:5-32:19
 MERGED from [androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\Administrator\.gradle\caches\8.10.2\transforms\70bf1a79e5b9ed37cad886f0d6998ae5\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\Administrator\.gradle\caches\8.10.2\transforms\70bf1a79e5b9ed37cad886f0d6998ae5\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\Administrator\.gradle\caches\8.10.2\transforms\521d3121c253ec864847bd2939d9079c\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:22:5-26:19
@@ -119,6 +119,14 @@ category#android.intent.category.LAUNCHER
 ADDED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
 		ADDED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:23:27-74
+activity#com.main.taskadoo_app.LoginScreen
+ADDED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:26:9-31:20
+	android:label
+		ADDED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:29:13-45
+	android:exported
+		ADDED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml:27:13-40
 uses-sdk
 INJECTED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from P:\_Repositories\TaskaDoo\taskadoo_app\app\src\main\AndroidManifest.xml

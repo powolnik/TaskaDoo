@@ -38,6 +38,11 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.main.taskadoo_app.LoginScreen"
+            android:exported="true"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
             android:name="androidx.compose.ui.tooling.PreviewActivity"
             android:exported="true" />
         <activity

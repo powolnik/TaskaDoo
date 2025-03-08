@@ -1,6 +1,6 @@
 *.iml
- .idea/misc.xml
-.gradle
+.idea/
+/gradle/
 /local.properties
 /.idea/caches
 /.idea/libraries
@@ -12065,4 +12065,11 @@ local.properties
 /node_modules/yargs-parser/package.json
 /node_modules/yargs-parser/README.md
 /node_modules/.package-lock.json
-/.idea/misc.xml
+taskadoo_app/.gradle/8.10.2/fileHashes/fileHashes.bin
+taskadoo_app/.gradle/8.10.2/fileHashes/fileHashes.lock
+taskadoo_app/.gradle/file-system.probe
+taskadoo_app/.idea/deploymentTargetSelector.xml
+taskadoo_app/.idea/gradle.xml
+taskadoo_app/.idea/inspectionProfiles/Project_Default.xml
+taskadoo_app/.idea/workspace.xml
+taskadoo_app/app/src/main/java/com/main/taskadoo_app/MainActivity.kt

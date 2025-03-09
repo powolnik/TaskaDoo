@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -24,7 +23,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.main.taskadoo_app.ui.theme.Typography
 
@@ -44,12 +42,13 @@ fun TDText(
     modifier: Modifier = Modifier,
     textColor: Color = MaterialTheme.colorScheme.onPrimary,
     textBackground: Color = MaterialTheme.colorScheme.primary,
+    paddingValues: Int = 10,
     textStyle: TextStyle = Typography.displaySmall
 ) {
     Text(
         text = text,
         modifier = modifier
-            .padding(2.dp)
+            .padding(paddingValues.dp)
             .background(color = textBackground, shape = RectangleShape),
         style = textStyle.copy(color = textColor)
     )
@@ -69,6 +68,7 @@ fun TDText(
  *                     Defaults to [MaterialTheme.colorScheme.onPrimary].*/
 @Composable
 fun TDButton(name: String,
+             toast: String = "Default",
              onClickAction: (() -> Unit)? = null,
              containerColor: Color = MaterialTheme.colorScheme.primary,
              contentColor: Color = MaterialTheme.colorScheme.onPrimary) {
@@ -76,7 +76,7 @@ fun TDButton(name: String,
 
     // Use a default action that shows a Toast if no action is provided.
     val effectiveOnClick = onClickAction ?: {
-        Toast.makeText(ctx, "DEFAULT", Toast.LENGTH_SHORT).show() }
+        Toast.makeText(ctx, toast, Toast.LENGTH_SHORT).show() }
 
     Button(modifier = Modifier.padding(8.dp),
         colors = ButtonDefaults.buttonColors(
@@ -100,7 +100,8 @@ fun TDButton(name: String,
 @Composable
 fun TDColumn(modifier: Modifier = Modifier,
              arrangement: Arrangement.Vertical = Arrangement.Bottom,
-             content: @Composable ColumnScope.() -> Unit, ) {
+             content: @Composable ColumnScope.() -> Unit,
+             ) {
     Column(modifier = modifier
         .padding(16.dp),
         verticalArrangement = arrangement,
@@ -119,7 +120,8 @@ fun TDColumn(modifier: Modifier = Modifier,
  * @param content The content to be placed in the row, conforming to [RowScope].*/
 @Composable
 fun TDRow(modifier: Modifier = Modifier,
-    content: @Composable RowScope.() -> Unit) {
+          arrangement: Arrangement.Vertical = Arrangement.Bottom,
+          content: @Composable RowScope.() -> Unit) {
     Row(
         modifier = Modifier
             .padding(16.dp),
@@ -160,23 +162,34 @@ fun TDTextField(
 
 @Composable
 fun TDBox(modifier: Modifier = Modifier,
-          content: @Composable BoxScope.() -> Unit){
-   Box(modifier = modifier.fillMaxSize(),
-       contentAlignment = Alignment.Center,
-       content = content,
+          contentAlignment: Alignment = Alignment.Center,
+          content: @Composable BoxScope.() -> Unit
+) {
+   Box(modifier = modifier,
+       contentAlignment = contentAlignment,
+       content = content
        )
 }
 
-
-@Preview(showBackground = true)
-@Composable
-fun preview(){
-    TDColumn {
-        TDBox() {
-            TDText("X")
-        }
-    }
-}
+//@Composable
+//fun TDCard(
+//    modifier: Modifier = Modifier,
+//    shape: Shape = Shapes.medium,
+//    content: @Composable () -> Unit,
+//    arrangement: Arrangement.Vertical = Arrangement.Bottom,
+//) {
+//    Card(Modifier
+//            .fillMaxWidth()
+//            .padding(8.dp)
+//            .clickable {
+//
+//            },
+//        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+//    ) {
+//        content()
+//    }
+//}
+//
 
 //@Composable
 /*fun CxR(row_count: Int = 1, column_count: Int = 1) {
@@ -190,3 +203,21 @@ fun preview(){
         }
     }
 }*/
+//e: file:///P:/_Repositories/TaskaDoo/taskadoo_app/app/src/main/java/com/main/taskadoo_app/src/BasicTypes.kt:181:5 None of the following candidates is applicable:
+//fun Card(onClick: () -> U...,
+// modifier: Modifier = ...,
+//
+// enabled: Boolean = ...,
+// shape: Shape = ...,
+// colors: CardColors = ...,
+// elevation: CardElevation = ...,
+// border: BorderStroke? = ...,
+// interactionSource: MutableInteractionSource? = ...,
+// content: @Composable() ComposableFunction1<ColumnSc...,
+// Unit>): Unit
+//fun Card(modifier: Modifier = ...,
+// shape: Shape = ...,
+// colors: CardColors = ...,
+// elevation: CardElevation = ...,
+// border: BorderStroke? = ...,
+// content: @Composable() ComposableFunction1<ColumnScope

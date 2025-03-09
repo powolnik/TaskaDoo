@@ -9,14 +9,19 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import com.main.taskadoo_app.Screen
 import com.main.taskadoo_app.src.TDButton
 import com.main.taskadoo_app.src.TDRow
 import com.main.taskadoo_app.src.TDTextField
 
-
+/*** Composable screen for adding a new note.
+ *
+ * This screen provides two input fields for the note's title and content,
+ * as well as a button to save the note. Upon clicking the "Save Note" button,
+ * the user is navigated back to the home screen.
+ *
+ * @param navController The [NavController] used for navigating between screens.*/
 @Composable
 fun AddNoteScreen(navController: NavController
 ) {
@@ -34,16 +39,13 @@ fun AddNoteScreen(navController: NavController
                 onValueChange = { ContentText = it },
                 placeholder = "Enter note content..."
             )
-            TDButton("Save Note",
+            TDButton(name = "Save Note",
                 onClickAction = {
-                    navController.navigate(route = Screen.Home.route)
-                })
+                    println("AddNote OnClick")
+                    navController.navigate(Screen.Home.route)
+                }
+            )
+
         }
     }
 }
-
-//@Preview(showBackground = true)
-//@Composable
-//fun AddingNoteScreenPreview(){
-//    AddNoteScreen()
-//}

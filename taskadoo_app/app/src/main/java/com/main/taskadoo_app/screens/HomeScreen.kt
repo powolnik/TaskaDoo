@@ -9,6 +9,7 @@ import com.main.taskadoo_app.src.TDButton
 import com.main.taskadoo_app.src.TDColumn
 import com.main.taskadoo_app.src.TDRow
 
+
 @Composable
 fun HomeScreen(navController: NavController) {
     TDColumn(modifier = Modifier.fillMaxSize()) {
@@ -22,6 +23,11 @@ fun HomeScreen(navController: NavController) {
                 "Settings",
                 onClickAction = {
                     navController.navigate(route = Screen.Settings.route)
+                })
+            TDButton(
+                "Note",
+                onClickAction = {
+                    navController.navigate(route = Screen.NotePreview.route)
                 })
         }
     }

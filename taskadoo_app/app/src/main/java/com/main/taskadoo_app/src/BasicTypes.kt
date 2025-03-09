@@ -3,6 +3,8 @@ package com.main.taskadoo_app.src
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
@@ -22,6 +24,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.main.taskadoo_app.ui.theme.Typography
 
@@ -96,11 +99,11 @@ fun TDButton(name: String,
  * @param content A composable lambda that defines the content of the column.*/
 @Composable
 fun TDColumn(modifier: Modifier = Modifier,
-    content: @Composable ColumnScope.() -> Unit) {
+             arrangement: Arrangement.Vertical = Arrangement.Bottom,
+             content: @Composable ColumnScope.() -> Unit, ) {
     Column(modifier = modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.Bottom,
+        .padding(16.dp),
+        verticalArrangement = arrangement,
         horizontalAlignment = Alignment.CenterHorizontally,
         content = content
     )
@@ -115,10 +118,10 @@ fun TDColumn(modifier: Modifier = Modifier,
  *
  * @param content The content to be placed in the row, conforming to [RowScope].*/
 @Composable
-fun TDRow(content: @Composable RowScope.() -> Unit) {
+fun TDRow(modifier: Modifier = Modifier,
+    content: @Composable RowScope.() -> Unit) {
     Row(
         modifier = Modifier
-            .fillMaxWidth()
             .padding(16.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         content = content
@@ -153,6 +156,26 @@ fun TDTextField(
         textStyle = Typography.displaySmall,
         singleLine = isSingleLine
     )
+}
+
+@Composable
+fun TDBox(modifier: Modifier = Modifier,
+          content: @Composable BoxScope.() -> Unit){
+   Box(modifier = modifier.fillMaxSize(),
+       contentAlignment = Alignment.Center,
+       content = content,
+       )
+}
+
+
+@Preview(showBackground = true)
+@Composable
+fun preview(){
+    TDColumn {
+        TDBox() {
+            TDText("X")
+        }
+    }
 }
 
 //@Composable

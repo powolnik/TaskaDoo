@@ -1,130 +1,163 @@
 package com.main.taskadoo_app.src
 
-import android.service.autofill.OnClickAction
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import com.main.taskadoo_app.ui.theme.Typography
 
-@Composable
-fun TDButton(
-    name: String = "DEFAULT",
-    onClickAction: (() -> Unit)? = null,
-    container_color: Color = MaterialTheme.colorScheme.secondary,
-    content_color: Color = MaterialTheme.colorScheme.background
-) {
-    val ctx = LocalContext.current
-    Button(
-        modifier = Modifier.padding(8.dp),
-        colors = ButtonDefaults.buttonColors(
-            containerColor = container_color,
-            contentColor = content_color
-        ),
-        onClick = {
-            if (onClickAction == null) {
-                Toast.makeText(ctx, "DEFAULT", Toast.LENGTH_SHORT).show()
-                onClickAction?.invoke()
-            }
-            else {
-                onClickAction()
-            }
-        }
-    ) {
-        TDText(name, content_color, container_color)
-    }
-}
-
+/*** A composable function that displays text with custom styling.
+ *
+ * This function wraps the standard [Text] composable to apply padding and a background,
+ * using the provided text color, background color, and text style.
+ *
+ * @param text The text string to display.
+ * @param modifier The [Modifier] to be applied to this text. Defaults to [Modifier].
+ * @param textColor The color of the text. Defaults to [MaterialTheme.colorScheme.onBackground].
+ * @param backgroundColor The background color behind the text. Defaults to [MaterialTheme.colorScheme.background].
+ * @param textStyle The [TextStyle] applied to the text. Defaults to [Typography.displaySmall].*/
 @Composable
 fun TDText(
     text: String,
-    textColor: Color = Color.White,
-    backgroundColor: Color = Color.DarkGray,
-    fontSize: TextUnit = 25.sp
+    modifier: Modifier = Modifier,
+    textColor: Color = MaterialTheme.colorScheme.onPrimary,
+    textBackground: Color = MaterialTheme.colorScheme.primary,
+    textStyle: TextStyle = Typography.displaySmall
 ) {
     Text(
         text = text,
-        modifier = Modifier
+        modifier = modifier
             .padding(2.dp)
-            .background(
-                shape = RectangleShape,
-                color = backgroundColor
-            ),
-        color = textColor,
-        fontSize = fontSize
+            .background(color = textBackground, shape = RectangleShape),
+        style = textStyle.copy(color = textColor)
     )
 }
 
+/*** A composable function that renders a custom button.
+ *
+ * This button displays a text label and executes an action when clicked.
+ * If no action is provided (i.e. if [onClickAction] is null), it shows a Toast with the message "DEFAULT".
+ *
+ * @param name The text label to display on the button.
+ * @param onClickAction The lambda function to be executed when the button is clicked.
+ *                      If null, a default Toast message is shown.
+ * @param containerColor The background color of the button, typically from the MaterialTheme's primary color.
+ *                       Defaults to [MaterialTheme.colorScheme.primary].
+ * @param contentColor The color used for the button's content (e.g., text), typically from the MaterialTheme's onPrimary color.
+ *                     Defaults to [MaterialTheme.colorScheme.onPrimary].*/
 @Composable
-fun TDRow(row_count: Int) {
+fun TDButton(name: String,
+             onClickAction: (() -> Unit)? = null,
+             containerColor: Color = MaterialTheme.colorScheme.primary,
+             contentColor: Color = MaterialTheme.colorScheme.onPrimary) {
+    val ctx = LocalContext.current
+
+    // Use a default action that shows a Toast if no action is provided.
+    val effectiveOnClick = onClickAction ?: {
+        Toast.makeText(ctx, "DEFAULT", Toast.LENGTH_SHORT).show() }
+
+    Button(modifier = Modifier.padding(8.dp),
+        colors = ButtonDefaults.buttonColors(
+            containerColor = containerColor,
+            contentColor = contentColor),
+        onClick = effectiveOnClick)
+    {
+        TDText(name)
+    }
+}
+
+/*** A composable function that arranges its children vertically in a column layout.
+ *
+ * This function wraps the standard [Column] composable to apply default styling,
+ * including filling the available size and adding padding. The children are arranged
+ * from the bottom of the available space and centered horizontally.
+ *
+ * @param modifier A [Modifier] for this layout that can be used to further customize the appearance.
+ *                 Defaults to [Modifier].
+ * @param content A composable lambda that defines the content of the column.*/
+@Composable
+fun TDColumn(modifier: Modifier = Modifier,
+    content: @Composable ColumnScope.() -> Unit) {
+    Column(modifier = modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        verticalArrangement = Arrangement.Bottom,
+        horizontalAlignment = Alignment.CenterHorizontally,
+        content = content
+    )
+}
+
+
+@Composable
+fun TDRow(content: @Composable RowScope.() -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .padding(16.dp),
-        horizontalArrangement = Arrangement.SpaceBetween
+        horizontalArrangement = Arrangement.SpaceBetween,
+        content = content
     )
-    {
-        for (i in 1..row_count) {
-            TDButton(onClickAction = {
-                println("from BasicTypes.kt from TDRow")
-            })
-        }
-    }
 }
 
+/*** A composable text field component that wraps [TextField] with additional styling.
+ *
+ * This component is a customized text field that fills the width of its parent,
+ * applies standard padding, and uses a specific text style from the app's typography.
+ *
+ * @param value The current text displayed in the text field.
+ * @param onValueChange Callback that is triggered when the text changes.
+ * @param placeholder A string to display as a placeholder when the text field is empty.
+ * @param modifier A [Modifier] for this text field. Defaults to [Modifier] if not provided.
+ * @param isSingleLine Determines whether the text field should be a single line.
+ */
 @Composable
-fun CxR(row_count: Int = 1, column_count: Int = 1) {
-    for (i in 1..row_count) {
-        Column() {
-            for (i in 1..row_count) {
-                TDRow(column_count)
+fun TDTextField(
+    value: String,
+    onValueChange: (String) -> Unit,
+    placeholder: String = "",
+    modifier: Modifier = Modifier,
+    isSingleLine: Boolean = true
+) {
+    TextField(
+        value = value,
+        onValueChange = onValueChange,
+        placeholder = { Text(placeholder) },
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(8.dp),
+        textStyle = Typography.displaySmall,
+        singleLine = isSingleLine
+    )
+}
+
+//@Composable
+/*fun CxR(row_count: Int = 1, column_count: Int = 1) {
+    run {
+        for (i in 1..row_count) {
+            TDColumn{
+                for (i in 1..row_count) {
+                    TDRow {}
+                }
             }
         }
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun MainPreview() {
-    CxR(3, 2)
-}
-
-//@Preview()
-//@Composable
-//fun Preview() {
-////    TDText("s")
-//    TDButton()
-//}
-
-//@Composable
-//fun TDColumn(){
-//    Column(modifier = Modifier
-////        .weight(1f)
-//        .padding(end = 8.dp),
-//        horizontalAlignment = Alignment.CenterHorizontally,
-//        verticalArrangement = Arrangement.SpaceEvenly
-//    ) {
-//
-//    }
-//}
-
-//@Preview(showBackground = true)
-//@Composable
-//fun TDColumnPreview(){
-//    TDColumn()
-//}
+}*/

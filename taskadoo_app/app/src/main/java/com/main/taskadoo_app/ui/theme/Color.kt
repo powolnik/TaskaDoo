@@ -3,44 +3,45 @@ package com.main.taskadoo_app.ui.theme
 import androidx.compose.ui.graphics.Color
 
 //region LightTheme
-    val PurpleLight = Color(0xFFD0BCFF)
-    val PurpleGreyLight = Color(0xFF4600BD)
-    val PinkLight = Color(0xFFFFC8CC)
+    val PrimaryLight = Color(0xFF2CFF70)
+    val SecondaryLight = Color(0xFFF7F4C2)
+    val TertiaryLight = Color(0xFF95D5A7)
 
-    // Accent colors
-    val BlueLight = Color(0xFFA5FFF7)
-    val GreenLight = Color(0xFFFFD98F)
-    val YellowLight = Color(0xFFFFB28A)
+    val OnPrimaryLight = Color(0xFF000000)
+    val OnSecondaryLight = Color(0xFF5968A7)
+    val OnTertiaryLight = Color(0xFFFFFFFF)
+
+    // Containers
+    val PrimaryContainerLight = Color(0xFFE5E5EA)
+    val SecondaryContainerLight = Color(0xFFD5CDBE)
 
     // Background and surface
-    val BackgroundLight = Color(0xFFFDF6FC)
-    val SurfaceLight = Color(0xFFFDF6FC)
-    val OnPrimaryLight = Color(0xFF3D4767)
-    val OnSecondaryLight = Color(0xFF5968A7)
+    val SurfaceLight = Color(0xFFF2F3F4)
+    val OnSurfaceLight = Color(0xFF4C5156)
+
+    val BackgroundLight = Color(0xFFF2F3F4)
 //endregion
 
 //region DarkTheme
-    // Primary and variants
-    val PurpleDark = Color(0xFF6650A4)
-    val PurpleGreyDark = Color(0xFF625B71)
-    val PinkDark = Color(0xFF7D5260)
+    val PrimaryDark = Color(0xFF004E7A)
+    val SecondaryDark = Color(0xFF2ECC71)
+    val TertiaryDark = Color(0xFF9B59B6)
 
-    // Accent colors
-    val BlueDark = Color(0xFF2962FF)
-    val GreenDark = Color(0xFF43A047)
-    val YellowDark = Color(0xFFFDD835)
+    val OnPrimaryDark = Color(0xFFFFFFFF)
+    val OnSecondaryDark = Color(0xDCCCCCFF)
+    val OnTertiaryDark = Color(0xFFFFFFFF)
+
+    // Containers
+    val PrimaryContainerDark = Color(0xFF212121)
+    val SecondaryContainerDark = Color(0xFF212121)
 
     // Background and surface
-    val BackgroundDark = Color(0xFF121212)
-    val SurfaceDark = Color(0xFF121212)
-    val OnPrimaryDark = Color(0xFFDCCCCC)
-    val OnSecondaryDark = Color(0xDCCCCCFF)
+    val SurfaceDark = Color(0xFF343A40)
+    val OnSurfaceDark = Color(0xFFFFFFD7)
+
+    val BackgroundDark = Color(0xFF343A40)
 //endregion
 
 //region ErrorOn
-    val OnPrimary  = Color(0xFFFFFFFF)
-    val OnSecondary  = Color(0xFFFFFFFF)
-    val OnBackground  = Color(0xFFE6E1E5)
-    val OnSurface  = Color(0xFFE6E1E5)
     val Error  = Color(0xFFEC9A9A)
 //endregion

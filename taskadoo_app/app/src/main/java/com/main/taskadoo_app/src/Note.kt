@@ -25,10 +25,10 @@ data class Note(val title: String, val content: String)
 fun NoteItem(
     note: Note
 ) {
-    val context = LocalContext.current
     Card(
         modifier = Modifier
             .fillMaxWidth()
+            .fillMaxSize()
             .clickable
             {
 
@@ -38,6 +38,7 @@ fun NoteItem(
         Column (
             modifier = Modifier
                 .fillMaxWidth()
+                .fillMaxSize()
                 .padding(16.dp),
             verticalArrangement = Arrangement.SpaceBetween,
             horizontalAlignment = Alignment.CenterHorizontally)
@@ -45,17 +46,16 @@ fun NoteItem(
             Text(note.title)
             Row(modifier = Modifier
                 .fillMaxWidth()
+                .fillMaxSize()
                 .padding(top = 16.dp),
-                horizontalArrangement = Arrangement.Center)
+                horizontalArrangement = Arrangement.Absolute.Center,
+                verticalAlignment = Alignment.CenterVertically)
             {
                 Text(note.content)
             }
-                TDButton(onClickAction = { println("OnClick from NoteItem") })
         }
     }
 }
-
-
 
 var text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, " +
         "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " +

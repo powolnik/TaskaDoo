@@ -144,9 +144,10 @@ fun TDRow(modifier: Modifier = Modifier,
 fun TDTextField(
     value: String,
     onValueChange: (String) -> Unit,
-    placeholder: String = "",
+    placeholder: String = "DEFAULT...",
     modifier: Modifier = Modifier,
-    isSingleLine: Boolean = true
+    isSingleLine: Boolean = true,
+    paddingValues: Int = 10
 ) {
     TextField(
         value = value,
@@ -154,7 +155,7 @@ fun TDTextField(
         placeholder = { Text(placeholder) },
         modifier = modifier
             .fillMaxWidth()
-            .padding(8.dp),
+            .padding(paddingValues.dp),
         textStyle = Typography.displaySmall,
         singleLine = isSingleLine
     )
@@ -170,54 +171,3 @@ fun TDBox(modifier: Modifier = Modifier,
        content = content
        )
 }
-
-//@Composable
-//fun TDCard(
-//    modifier: Modifier = Modifier,
-//    shape: Shape = Shapes.medium,
-//    content: @Composable () -> Unit,
-//    arrangement: Arrangement.Vertical = Arrangement.Bottom,
-//) {
-//    Card(Modifier
-//            .fillMaxWidth()
-//            .padding(8.dp)
-//            .clickable {
-//
-//            },
-//        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
-//    ) {
-//        content()
-//    }
-//}
-//
-
-//@Composable
-/*fun CxR(row_count: Int = 1, column_count: Int = 1) {
-    run {
-        for (i in 1..row_count) {
-            TDColumn{
-                for (i in 1..row_count) {
-                    TDRow {}
-                }
-            }
-        }
-    }
-}*/
-//e: file:///P:/_Repositories/TaskaDoo/taskadoo_app/app/src/main/java/com/main/taskadoo_app/src/BasicTypes.kt:181:5 None of the following candidates is applicable:
-//fun Card(onClick: () -> U...,
-// modifier: Modifier = ...,
-//
-// enabled: Boolean = ...,
-// shape: Shape = ...,
-// colors: CardColors = ...,
-// elevation: CardElevation = ...,
-// border: BorderStroke? = ...,
-// interactionSource: MutableInteractionSource? = ...,
-// content: @Composable() ComposableFunction1<ColumnSc...,
-// Unit>): Unit
-//fun Card(modifier: Modifier = ...,
-// shape: Shape = ...,
-// colors: CardColors = ...,
-// elevation: CardElevation = ...,
-// border: BorderStroke? = ...,
-// content: @Composable() ComposableFunction1<ColumnScope

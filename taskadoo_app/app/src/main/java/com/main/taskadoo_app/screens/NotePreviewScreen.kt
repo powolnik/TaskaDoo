@@ -27,7 +27,8 @@ fun NotePreviewScreen(navController: NavController) {
 		TDRow() {
 			NoteItem(note)
 		}
-		TDButton("X", note.content
+		TDButton(name = "X",
+			toast = note.content
 		)
 	}
 }

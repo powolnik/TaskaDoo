@@ -106,7 +106,14 @@ fun TDColumn(modifier: Modifier = Modifier,
     )
 }
 
-
+/*** Composable function for creating a horizontally arranged row with predefined styling.
+ *
+ * This component provides:
+ * - Full width occupation
+ * - 16dp horizontal padding
+ * - Items distributed with [Arrangement.SpaceBetween]
+ *
+ * @param content The content to be placed in the row, conforming to [RowScope].*/
 @Composable
 fun TDRow(content: @Composable RowScope.() -> Unit) {
     Row(
@@ -127,8 +134,7 @@ fun TDRow(content: @Composable RowScope.() -> Unit) {
  * @param onValueChange Callback that is triggered when the text changes.
  * @param placeholder A string to display as a placeholder when the text field is empty.
  * @param modifier A [Modifier] for this text field. Defaults to [Modifier] if not provided.
- * @param isSingleLine Determines whether the text field should be a single line.
- */
+ * @param isSingleLine Determines whether the text field should be a single line.*/
 @Composable
 fun TDTextField(
     value: String,

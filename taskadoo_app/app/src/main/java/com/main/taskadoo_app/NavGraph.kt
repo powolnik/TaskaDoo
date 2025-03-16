@@ -6,7 +6,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.main.taskadoo_app.screens.AddNoteScreen
 import com.main.taskadoo_app.screens.HomeScreen
+import com.main.taskadoo_app.screens.NoteScreen
+import com.main.taskadoo_app.screens.NotesListScreen
 import com.main.taskadoo_app.screens.SettingsScreen
+
 
 @Composable
 fun SetupNavGraph(
@@ -27,6 +30,14 @@ fun SetupNavGraph(
         composable(route = Screen.Settings.route
         ) {
             SettingsScreen(navController)
+        }
+        composable(route = Screen.NotePreview.route
+        ) {
+            NoteScreen(navController)
+        }
+        composable(route = Screen.NotesList.route
+        ) {
+            NotesListScreen(navController)
         }
     }
 }

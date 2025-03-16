@@ -3,7 +3,9 @@ package com.main.taskadoo_app.screens
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.main.taskadoo_app.Screen
 import com.main.taskadoo_app.src.TDButton
 import com.main.taskadoo_app.src.TDColumn
@@ -25,16 +27,16 @@ fun HomeScreen(navController: NavController) {
                     navController.navigate(route = Screen.Settings.route)
                 })
             TDButton(
-                "Note",
+                "Notes",
                 onClickAction = {
-                    navController.navigate(route = Screen.NotePreview.route)
+                    navController.navigate(route = Screen.NotesList.route)
                 })
         }
     }
 }
 
-//@Preview(showBackground = true)
-//@Composable
-//fun StartScreenPreview(){
-//    HomeScreen()
-//}
+@Preview(showBackground = true)
+@Composable
+fun HomeScreenPreview(){
+    HomeScreen(navController = rememberNavController())
+}

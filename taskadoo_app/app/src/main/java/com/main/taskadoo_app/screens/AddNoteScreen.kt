@@ -1,6 +1,5 @@
 package com.main.taskadoo_app.screens
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxSize
 import com.main.taskadoo_app.src.TDColumn
 import androidx.compose.runtime.Composable
@@ -9,11 +8,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.main.taskadoo_app.Screen
 import com.main.taskadoo_app.src.TDButton
 import com.main.taskadoo_app.src.TDRow
 import com.main.taskadoo_app.src.TDTextField
+
 
 /*** Composable screen for adding a new note.
  *
@@ -27,25 +29,34 @@ fun AddNoteScreen(navController: NavController
 ) {
     var TitleText by remember { mutableStateOf("") }
     var ContentText by remember { mutableStateOf("") }
-    TDRow(modifier = Modifier.fillMaxSize()) {
-        TDColumn(arrangement = Arrangement.Top) {
+    TDColumn(modifier = Modifier.fillMaxSize()) {
+        TDRow(
+        ) {
             TDTextField(
                 value = TitleText,
                 onValueChange = { TitleText = it },
                 placeholder = "Enter note title...",
             )
+        }
+        TDRow(
+        ) {
             TDTextField(
                 value = ContentText,
                 onValueChange = { ContentText = it },
                 placeholder = "Enter note content..."
             )
+        }
+        TDColumn() {
             TDButton(name = "Save Note",
                 onClickAction = {
                     println("AddNote OnClick")
-                    navController.navigate(Screen.Home.route)
-                }
-            )
-
+                    navController.navigate(route = Screen.Home.route) } )
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun AddNoteScreenPreview(){
+    AddNoteScreen(navController = rememberNavController())
 }

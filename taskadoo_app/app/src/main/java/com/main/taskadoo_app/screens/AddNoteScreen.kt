@@ -1,7 +1,7 @@
 package com.main.taskadoo_app.screens
 
 import androidx.compose.foundation.layout.fillMaxSize
-import com.main.taskadoo_app.src.TDColumn
+import com.main.taskadoo_app.components.TDColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -11,10 +11,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.main.taskadoo_app.Screen
-import com.main.taskadoo_app.src.TDButton
-import com.main.taskadoo_app.src.TDRow
-import com.main.taskadoo_app.src.TDTextField
+import com.main.taskadoo_app.navigation.Screen
+import com.main.taskadoo_app.components.TDRow
+import com.main.taskadoo_app.components.TDTextField
+import com.main.taskadoo_app.components.TDButton
 
 
 /*** Composable screen for adding a new note.
@@ -27,26 +27,24 @@ import com.main.taskadoo_app.src.TDTextField
 @Composable
 fun AddNoteScreen(navController: NavController
 ) {
-    var TitleText by remember { mutableStateOf("") }
-    var ContentText by remember { mutableStateOf("") }
+    var titleText by remember { mutableStateOf("") }
+    var contentText by remember { mutableStateOf("") }
     TDColumn(modifier = Modifier.fillMaxSize()) {
-        TDRow(
-        ) {
+        TDRow {
             TDTextField(
-                value = TitleText,
-                onValueChange = { TitleText = it },
+                value = titleText,
+                onValueChange = { titleText = it },
                 placeholder = "Enter note title...",
             )
         }
-        TDRow(
-        ) {
+        TDRow {
             TDTextField(
-                value = ContentText,
-                onValueChange = { ContentText = it },
+                value = contentText,
+                onValueChange = { contentText = it },
                 placeholder = "Enter note content..."
             )
         }
-        TDColumn() {
+        TDColumn {
             TDButton(name = "Save Note",
                 onClickAction = {
                     println("AddNote OnClick")

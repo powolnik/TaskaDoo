@@ -1,0 +1,4 @@
+ 1 Analyze: Understand what each composable does.
+ 2 Cleanup: Remove unnecessary imports, redundant code, improve readability.
+ 3 Improve: Optimize performance or structure without losing functionality.
+ 4 Preserve all TD-prefixed functions as they're essential for the app's UI components.

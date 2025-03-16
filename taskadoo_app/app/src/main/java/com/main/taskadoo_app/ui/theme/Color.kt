@@ -3,16 +3,16 @@ package com.main.taskadoo_app.ui.theme
 import androidx.compose.ui.graphics.Color
 
 //region LightTheme
-    val PrimaryLight = Color(0xFF2CFF70)
+    val PrimaryLight = Color(0xff329a54)
     val SecondaryLight = Color(0xFFF7F4C2)
     val TertiaryLight = Color(0xFF95D5A7)
 
-    val OnPrimaryLight = Color(0xFF000000)
+    val OnPrimaryLight = Color(0xfffffdfd)
     val OnSecondaryLight = Color(0xFF5968A7)
     val OnTertiaryLight = Color(0xFFFFFFFF)
 
     // Containers
-    val PrimaryContainerLight = Color(0xFFE5E5EA)
+    val PrimaryContainerLight = Color(0xff5757f3)
     val SecondaryContainerLight = Color(0xFFD5CDBE)
 
     // Background and surface

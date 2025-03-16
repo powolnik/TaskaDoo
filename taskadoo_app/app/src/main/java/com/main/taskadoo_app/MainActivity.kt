@@ -10,7 +10,6 @@ import com.main.taskadoo_app.ui.theme.ComposeTestTheme
 
 // Main activity class that sets up the application content
 class MainActivity : ComponentActivity() {
-
     lateinit var navController: NavHostController
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,3 +22,4 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+

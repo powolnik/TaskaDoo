@@ -6,12 +6,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
-import com.main.taskadoo_app.src.Note
-import com.main.taskadoo_app.src.TDButton
-import com.main.taskadoo_app.src.TDColumn
+import com.main.taskadoo_app.src.TDNote
+import com.main.taskadoo_app.components.TDButton
+import com.main.taskadoo_app.components.TDColumn
+import com.main.taskadoo_app.components.TDRow
 import com.main.taskadoo_app.src.TDNoteCard
-import com.main.taskadoo_app.src.TDRow
 
 
 /*** Composable screen for displaying a note.
@@ -19,9 +18,9 @@ import com.main.taskadoo_app.src.TDRow
  * This screen presents a note with a title and content inside a card layout.
  * Additionally, it includes a button to display the note content as a toast message.
  *
- * @param navController The [NavController] used for navigation between screens.*/
+ * @ navController The [NavController] used for navigation between screens.*/
 @Composable
-fun NoteScreen(navController: NavController) {
+fun NoteScreen(/*navController: NavController*/) {
 	TDColumn(modifier = Modifier.fillMaxSize(),
 		arrangement = Arrangement.SpaceBetween
 	) {
@@ -32,17 +31,15 @@ fun NoteScreen(navController: NavController) {
 		}
 
 		// Created sample note, inputing string prepared above
-		var note = Note("Title", contentTEMP)
+		val note = TDNote("id", "Title", contentTEMP)
 
-		TDRow(
-			horizontalArrangement = Arrangement.Center
-		) {
+		TDRow(horizontalArrangement = Arrangement.Center) {
 			TDNoteCard(
-				note,
-				onClick = TODO(),
-				onDeleteClick = TODO()
+				note, { println("From TDNoteCard") },
+				onDeleteClick = {}
 			)
 		}
+
 
 		// Toasting note content
 		TDButton(name = "Toast",
@@ -54,5 +51,5 @@ fun NoteScreen(navController: NavController) {
 @Preview(showBackground = true)
 @Composable
 fun NotePreviewScreenPreview(){
-	NoteScreen(navController = rememberNavController())
+	NoteScreen()
 }

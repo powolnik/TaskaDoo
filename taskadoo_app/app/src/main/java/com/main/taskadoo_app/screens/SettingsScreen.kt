@@ -5,13 +5,13 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -19,7 +19,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.main.taskadoo_app.src.TDRow
+import com.main.taskadoo_app.components.TDColumn
+import com.main.taskadoo_app.components.TDRow
 
 /**
  * Data class representing application settings.
@@ -127,7 +128,7 @@ fun SettingsScreen(
 	viewModel: SettingsViewModel = viewModel()
 ) {
 	val settings by viewModel.settings
-	val context = LocalContext.current
+//	val context = LocalContext.current
 
 	var showDarkModeDialog by remember { mutableStateOf(false) }
 	var showSortOrderDialog by remember { mutableStateOf(false) }
@@ -138,7 +139,7 @@ fun SettingsScreen(
 				title = { Text("Settings") },
 				navigationIcon = {
 					IconButton(onClick = { navController.navigateUp() }) {
-						Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+						Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
 					}
 				}
 			)
@@ -162,8 +163,8 @@ fun SettingsScreen(
 			)
 
 			// Font scale setting
-			Column(modifier = Modifier.padding(horizontal = 16.dp)) {
-				Row(
+			TDColumn(modifier = Modifier.padding(horizontal = 16.dp)) {
+				TDRow(
 					modifier = Modifier
 						.fillMaxWidth()
 						.padding(vertical = 12.dp),
@@ -192,7 +193,7 @@ fun SettingsScreen(
 				)
 
 				TDRow(modifier = Modifier.fillMaxWidth(),
-					vertivalAlignment = Alignment.CenterVertically,
+					verticalAlignment = Alignment.CenterVertically,
 					horizontalArrangement = Arrangement.Center
 				) {
 					Text("Small", style = MaterialTheme.typography.bodySmall)
@@ -212,7 +213,7 @@ fun SettingsScreen(
 				onCheckedChange = { viewModel.toggleGridLayout(it) }
 			)
 
-			Divider(modifier = Modifier.padding(vertical = 8.dp))
+			HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
 
 			// Notes Section
 			SettingsSectionHeader("Notes")
@@ -234,7 +235,7 @@ fun SettingsScreen(
 				onCheckedChange = { viewModel.toggleAutoSave(it) }
 			)
 
-			Divider(modifier = Modifier.padding(vertical = 8.dp))
+			HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
 
 			// Notifications Section
 			SettingsSectionHeader("Notifications")
@@ -248,7 +249,7 @@ fun SettingsScreen(
 				onCheckedChange = { viewModel.toggleNotifications(it) }
 			)
 
-			Divider(modifier = Modifier.padding(vertical = 8.dp))
+			HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
 
 			// Cloud Section
 			SettingsSectionHeader("Cloud")
@@ -262,7 +263,7 @@ fun SettingsScreen(
 				onCheckedChange = { viewModel.toggleSync(it) }
 			)
 
-			Divider(modifier = Modifier.padding(vertical = 8.dp))
+			HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
 
 			// About Section
 			SettingsSectionHeader("About")
@@ -301,9 +302,9 @@ fun SettingsScreen(
 			onDismissRequest = { showDarkModeDialog = false },
 			title = { Text("Choose Theme") },
 			text = {
-				Column {
-					DarkModePreference.values().forEach { preference ->
-						Row(
+				TDColumn {
+					DarkModePreference.entries.forEach { preference ->
+						TDRow(
 							modifier = Modifier
 								.fillMaxWidth()
 								.padding(vertical = 8.dp)
@@ -311,7 +312,6 @@ fun SettingsScreen(
 									viewModel.updateDarkMode(preference)
 									showDarkModeDialog = false
 								},
-							verticalAlignment = Alignment.CenterVertically
 						) {
 							RadioButton(
 								selected = settings.darkMode == preference,
@@ -341,7 +341,7 @@ fun SettingsScreen(
 			title = { Text("Sort Notes By") },
 			text = {
 				Column {
-					SortOrder.values().forEach { order ->
+					SortOrder.entries.forEach { order ->
 						Row(
 							modifier = Modifier
 								.fillMaxWidth()
@@ -409,7 +409,7 @@ fun SettingsItem(
 			.fillMaxWidth()
 			.clickable(onClick = onClick)
 			.padding(horizontal = 16.dp, vertical = 12.dp),
-		vertivalAlignment = Alignment.CenterVertically
+		verticalAlignment = Alignment.CenterVertically
 	) {
 //		Icon(
 //			imageVector = icon,
@@ -440,7 +440,7 @@ fun SettingsItem(
 		Spacer(modifier = Modifier.width(8.dp))
 
 		Icon(
-			imageVector = Icons.Default.KeyboardArrowRight,
+			imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
 			contentDescription = null,
 			tint = MaterialTheme.colorScheme.onSurfaceVariant,
 			modifier = Modifier.alpha(0.7f)

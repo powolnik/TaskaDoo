@@ -20,11 +20,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.main.taskadoo_app.Screen
+import com.main.taskadoo_app.components.TDButton
+import com.main.taskadoo_app.components.TDSearchBar
+import com.main.taskadoo_app.navigation.Screen
 import com.main.taskadoo_app.src.NotesViewModel
-import com.main.taskadoo_app.src.TDColumn
-import com.main.taskadoo_app.src.TDNotesList
-import com.main.taskadoo_app.src.TDSearchBar
+import com.main.taskadoo_app.components.TDColumn
+import com.main.taskadoo_app.components.TDNotesList
+import com.main.taskadoo_app.src.TDNote
 
 
 /*** A composable function representing the screen that displays a list of notes.
@@ -73,10 +75,10 @@ fun NotesListScreen(navController: NavController,
 			)
 
 			TDNotesList(
-				notes = filteredNotes,
-				onNoteClick = { Toast.makeText(context, "${it.title}", Toast.LENGTH_SHORT).show() },
-				onDeleteClick = { notesViewModel.deleteNote(it) }) /*navController.navigate(route = Screen.NotePreview.route)*/
-		}
+				tdNote = listOf(TDNote()),
+				onNoteClick = { Toast.makeText(context, it.title, Toast.LENGTH_SHORT).show() },
+				/*onDeleteClick = { notesViewModel.deleteNote(it) })*/ /*navController.navigate(route = Screen.NotePreview.route)*/
+			)}
 	}
 }
 
@@ -85,4 +87,9 @@ fun NotesListScreen(navController: NavController,
 @Composable
 fun NotesListPreview(){
 	NotesListScreen(navController = rememberNavController())
+}
+@Preview(showBackground = true)
+@Composable
+fun bu(){
+	TDButton("B")
 }

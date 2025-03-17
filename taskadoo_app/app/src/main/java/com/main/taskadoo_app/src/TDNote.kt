@@ -1,13 +1,15 @@
 package com.main.taskadoo_app.src
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -23,10 +25,12 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
+import com.main.taskadoo_app.components.TDCard
 import com.main.taskadoo_app.components.TDColumn
 import com.main.taskadoo_app.components.TDRow
 import com.main.taskadoo_app.components.TDSpacer
 import com.main.taskadoo_app.components.TDText
+import com.main.taskadoo_app.components.TDTextField
 import java.util.Date
 import java.util.UUID
 
@@ -122,32 +126,29 @@ fun TDNoteCard(
     onClick: () -> Unit,
     onDeleteClick: () -> Unit
 ) {
-    Card(
-        onClick = onClick,
-        modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer
-        )
+    TDCard(
+        modifier = Modifier,
     ) {
         TDColumn(
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.fillMaxWidth().padding(10.dp)
         ) {
             TDRow(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.weight(.2f),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                TDText(
-                    text = tdNote.title,
-                    textStyle = MaterialTheme.typography.titleMedium,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.weight(1f)
-                )
+                TDTextField(
+					modifier = Modifier.weight(1f),
+					value = "Title...",
+					onValueChange = {},
+					placeholder = "Default...",
+					isSingleLine = true,
+					paddingValues = PaddingValues(15.dp)
+				)
 
                 IconButton(
                     onClick = { onDeleteClick() },
-                    modifier = Modifier.size(24.dp)
+                    modifier = Modifier.size(24.dp).weight(.25f)
                 ) {
                     Icon(
                         Icons.Default.Delete,
@@ -159,12 +160,13 @@ fun TDNoteCard(
 
             TDSpacer()
 
-            TDText(
-                text = tdNote.content,
-                textStyle = MaterialTheme.typography.bodyMedium,
-                maxLines = 3,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.fillMaxWidth()
+            TDTextField(
+                modifier = Modifier.weight(1f).wrapContentSize().fillMaxSize(),
+                value = tdNote.content,
+                onValueChange = { },
+                placeholder = "Default...",
+                isSingleLine = false,
+                paddingValues = PaddingValues(15.dp)
             )
         }
     }
@@ -173,8 +175,9 @@ fun TDNoteCard(
 @Preview(showBackground = true)
 @Composable
 fun NoteItemPreview() {
+    var s = "ASD\nDDD\nDDDDDA\nasd\ns\nsad\ns\ns\ns\ns\ns\ns\ns\ns\ns\nss\ns\ns"
     TDNoteCard(
-        TDNote("x", "Title", "contentTEMP"),
+        TDNote("x", "Title", s+s),
         onClick = {},
         onDeleteClick = {}
     )

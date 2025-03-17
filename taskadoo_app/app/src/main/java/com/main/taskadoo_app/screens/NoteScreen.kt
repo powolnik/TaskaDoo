@@ -1,9 +1,12 @@
 package com.main.taskadoo_app.screens
 
+import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import com.main.taskadoo_app.src.TDNote
@@ -22,7 +25,7 @@ import com.main.taskadoo_app.src.TDNoteCard
 @Composable
 fun NoteScreen(/*navController: NavController*/) {
 	TDColumn(modifier = Modifier.fillMaxSize(),
-		arrangement = Arrangement.SpaceBetween
+		arrangement = Arrangement.SpaceEvenly
 	) {
 		// Looped it so i get longer text without messing up space here in code, temp, to be deleted
 		var contentTEMP = ("s")
@@ -32,17 +35,20 @@ fun NoteScreen(/*navController: NavController*/) {
 
 		// Created sample note, inputing string prepared above
 		val note = TDNote("id", "Title", contentTEMP)
+		val context = LocalContext.current
 
-		TDRow(horizontalArrangement = Arrangement.Center) {
+		TDRow(
+			modifier = Modifier.weight(1f),
+			horizontalArrangement = Arrangement.Center) {
 			TDNoteCard(
-				note, { println("From TDNoteCard") },
+				note, { Toast.makeText(context, note.title, Toast.LENGTH_SHORT).show() },
 				onDeleteClick = {}
 			)
 		}
 
 
 		// Toasting note content
-		TDButton(name = "Toast",
+		TDButton(modifier = Modifier.fillMaxSize(1f), name = "Toast",
 			toast = note.content
 		)
 	}

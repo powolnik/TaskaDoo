@@ -2,6 +2,7 @@
 
 package com.main.taskadoo_app.navigation
 
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
@@ -9,12 +10,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.main.taskadoo_app.screens.AddNoteScreen
 import com.main.taskadoo_app.screens.HomeScreen
 import com.main.taskadoo_app.screens.NoteScreen
 import com.main.taskadoo_app.screens.NotesListScreen
@@ -22,7 +23,8 @@ import com.main.taskadoo_app.screens.SettingsScreen
 
 @Composable
 fun SetupNavGraph(
-    navController: NavHostController
+    navController: NavHostController,
+    padding: PaddingValues
 ) {
     Scaffold(
         topBar = {
@@ -45,7 +47,7 @@ fun SetupNavGraph(
                 NoteScreen(/*navController*/)
             }
             composable(route = Screen.AddNote.route) {
-                AddNoteScreen(navController)
+//                NoteScreen(navController)
             }
             composable(route = Screen.Settings.route) {
                 SettingsScreen(navController)
@@ -60,5 +62,5 @@ fun SetupNavGraph(
 @Preview(showBackground = true)
 @Composable
 fun asd(){
-    SetupNavGraph(rememberNavController())
+    SetupNavGraph(rememberNavController(), padding = PaddingValues(1.dp))
 }

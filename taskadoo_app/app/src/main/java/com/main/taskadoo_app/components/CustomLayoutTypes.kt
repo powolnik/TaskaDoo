@@ -41,6 +41,7 @@ import com.main.taskadoo_app.src.TDNoteCard
  * @param contentColor The button's text color.*/
 @Composable
 fun TDButton(name: String,
+             modifier: Modifier,
              toast: String = "Default",
              onClickAction: (() -> Unit)? = null,
              containerColor: Color = MaterialTheme.colorScheme.background,
@@ -145,6 +146,7 @@ fun TDSpacer(
 
 /** Enum defining different spacer sizes. */
 enum class SpacerSize(val value: Dp) {
+    Small(12.dp),
     Medium(16.dp)
 }
 
@@ -152,8 +154,8 @@ enum class SpacerSize(val value: Dp) {
  *
  * @param content The composable content inside the card.*/
 @Composable
-fun TDCard(content: @Composable RowScope.() -> Unit) {
-    Card(modifier = Modifier
+fun TDCard(modifier: Modifier, content: @Composable RowScope.() -> Unit = {}) {
+    Card(modifier = modifier
         .fillMaxWidth(),
         colors = CardDefaults.cardColors(contentColor = MaterialTheme.colorScheme.secondary)
     ) {
@@ -181,7 +183,7 @@ fun TDCard(content: @Composable RowScope.() -> Unit) {
 fun TDNotesList(
     tdNote: List<TDNote>,
     onNoteClick: (TDNote) -> Unit = {},
-//    onDeleteClick: (TDNote) -> Unit = {}
+    onDeleteClick: (TDNote) -> Unit = {}
 ) = if (tdNote.isEmpty()) {
     TDBox(
         modifier = Modifier.fillMaxSize(),

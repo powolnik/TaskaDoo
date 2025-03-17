@@ -1,6 +1,7 @@
 package com.main.taskadoo_app.screens
 
 import android.widget.Toast
+import com.main.taskadoo_app.src.NotesViewModel
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -23,7 +24,6 @@ import androidx.navigation.compose.rememberNavController
 import com.main.taskadoo_app.components.TDButton
 import com.main.taskadoo_app.components.TDSearchBar
 import com.main.taskadoo_app.navigation.Screen
-import com.main.taskadoo_app.src.NotesViewModel
 import com.main.taskadoo_app.components.TDColumn
 import com.main.taskadoo_app.components.TDNotesList
 import com.main.taskadoo_app.src.TDNote
@@ -77,19 +77,18 @@ fun NotesListScreen(navController: NavController,
 			TDNotesList(
 				tdNote = listOf(TDNote()),
 				onNoteClick = { Toast.makeText(context, it.title, Toast.LENGTH_SHORT).show() },
-				/*onDeleteClick = { notesViewModel.deleteNote(it) })*/ /*navController.navigate(route = Screen.NotePreview.route)*/
-			)}
+				onDeleteClick = { notesViewModel.deleteNote(it) }) /*navController.navigate(route = Screen.NotePreview.route)*/
+			}
 	}
 }
-
 
 @Preview(showBackground = true)
 @Composable
 fun NotesListPreview(){
 	NotesListScreen(navController = rememberNavController())
 }
-@Preview(showBackground = true)
-@Composable
-fun bu(){
-	TDButton("B")
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun bu(){
+//	TDButton("B")
+//}

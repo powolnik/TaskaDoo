@@ -2,6 +2,9 @@ package com.main.taskadoo_app.navigation
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.Send
@@ -10,6 +13,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 
 
@@ -20,7 +24,7 @@ fun BottomAppBar(
     onSettingsClick: () -> Unit = {navController.navigate(route = Screen.Settings.route)},
     modifier: Modifier = Modifier,
 ) {
-    Row(horizontalArrangement = Arrangement.SpaceEvenly) {
+    Row(modifier = Modifier.fillMaxWidth().padding(20.dp), horizontalArrangement = Arrangement.Center) {
         IconButton(onClick = { onAddNoteClick() }) {
             Icon(imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
                 contentDescription = null,
@@ -31,6 +35,5 @@ fun BottomAppBar(
                 contentDescription = null,
                 tint = Color.Red/*MaterialTheme.colorScheme.onSurfaceVariant*/)
         }
-
     }
 }

@@ -1,6 +1,5 @@
 package com.main.taskadoo_app.components
 
-import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
@@ -16,51 +15,16 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.main.taskadoo_app.src.TDNote
-import com.main.taskadoo_app.src.TDNoteCard
 
-
-/*** A composable function that renders a custom button.
- *
- * @param name The text displayed on the button.
- * @param toast The message displayed in a toast when clicked (if no action is provided).
- * @param onClickAction A lambda function executed when the button is clicked (optional).
- * @param containerColor The button's background color.
- * @param contentColor The button's text color.*/
-@Composable
-fun TDButton(name: String,
-             modifier: Modifier,
-             toast: String = "Default",
-             onClickAction: (() -> Unit)? = null,
-             containerColor: Color = MaterialTheme.colorScheme.background,
-             contentColor: Color = MaterialTheme.colorScheme.onBackground) {
-    val ctx = LocalContext.current
-
-    // Use a default action that shows a Toast if no action is provided.
-    val effectiveOnClick = onClickAction ?: {
-        Toast.makeText(ctx, toast, Toast.LENGTH_SHORT).show() }
-
-    Button(modifier = Modifier.padding(8.dp),
-        colors = ButtonDefaults.buttonColors(
-            containerColor = containerColor,
-            contentColor = contentColor),
-        onClick = effectiveOnClick)
-    {
-        TDText(modifier = Modifier, name)
-    }
-}
 
 /*** A composable function that creates a Box layout.
  *
@@ -171,20 +135,21 @@ fun TDCard(modifier: Modifier, content: @Composable RowScope.() -> Unit = {}) {
     }
 }
 
+
 /*** A composable function that displays a list of notes.
  *
  * If the list is empty, a message is shown prompting users to add new notes.
  * Otherwise, the notes are displayed in a scrollable column.
  *
  * @param tdNote A list (`List<TDNote>`) of [TDNote] objects to be displayed.
-// * @param onNoteClick A lambda function triggered when a note is clicked.
-// * @param onDeleteClick A lambda function triggered when a note's delete button is clicked.*/
+ * @param onNoteClick A lambda function triggered when a note is clicked.
+ * @param onDeleteClick A lambda function triggered when a note's delete button is clicked.*/
 @Composable
 fun TDNotesList(
-    tdNote: List<TDNote>,
+    tdNotesList: List<TDNote>,
     onNoteClick: (TDNote) -> Unit = {},
     onDeleteClick: (TDNote) -> Unit = {}
-) = if (tdNote.isEmpty()) {
+) = if (tdNotesList.isEmpty()) {
     TDBox(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
@@ -201,12 +166,13 @@ fun TDNotesList(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        items(3) {
-            TDNoteCard(
-                tdNote = TDNote(),
-                onClick = { println("onNoteClick(note)") },
-                onDeleteClick = { println("onDeleteClick(note)") }
-            )
-        }
+        val x =
+            items(tdNotesList.size) {
+                TDNoteCard(
+                    tdNote = TDNote(tdNotesList[0].id, tdNotesList[0].title, tdNotesList[0].content),
+                    onClick = { /*TODO(implement Toast with message "${this.title}")*/ },
+                    onDeleteClick = { /*TODO()*/ }
+                )
+            }
     }
 }

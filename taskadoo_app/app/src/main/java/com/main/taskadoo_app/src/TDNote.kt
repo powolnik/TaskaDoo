@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.Icon
@@ -25,6 +26,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
+import com.main.taskadoo_app.components.TDBox
 import com.main.taskadoo_app.components.TDCard
 import com.main.taskadoo_app.components.TDColumn
 import com.main.taskadoo_app.components.TDRow
@@ -51,7 +53,7 @@ data class TDNote(
  */
 class NotesViewModel : ViewModel() {
     private val notesList = mutableStateListOf<TDNote>()
-    private val tdNotes: List<TDNote> get() = notesList
+//    private val tdNotes: List<TDNote> get() = notesList
 
     var searchQuery by mutableStateOf("")
         private set
@@ -107,78 +109,11 @@ class NotesViewModel : ViewModel() {
      * @return A list of notes that match the query.
      */
     val filteredNotes get() = if (searchQuery.isBlank()) {
-        tdNotes
+        notesList
     } else {
-        tdNotes.filter {
+        notesList.filter {
             it.title.contains(searchQuery, ignoreCase = true) ||
                     it.content.contains(searchQuery, ignoreCase = true)
         }
     }
-}
-
-/*** Composable function for displaying a note card.
- * @param tdNote The note to display.
- * @param onClick Callback when the note card is clicked.
- * @param onDeleteClick Callback when the delete button is clicked.*/
-@Composable
-fun TDNoteCard(
-    tdNote: TDNote,
-    onClick: () -> Unit,
-    onDeleteClick: () -> Unit
-) {
-    TDCard(
-        modifier = Modifier,
-    ) {
-        TDColumn(
-            modifier = Modifier.fillMaxWidth().padding(10.dp)
-        ) {
-            TDRow(
-                modifier = Modifier.weight(.2f),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                TDTextField(
-					modifier = Modifier.weight(1f),
-					value = "Title...",
-					onValueChange = {},
-					placeholder = "Default...",
-					isSingleLine = true,
-					paddingValues = PaddingValues(15.dp)
-				)
-
-                IconButton(
-                    onClick = { onDeleteClick() },
-                    modifier = Modifier.size(24.dp).weight(.25f)
-                ) {
-                    Icon(
-                        Icons.Default.Delete,
-                        contentDescription = "Delete Note",
-                        tint = MaterialTheme.colorScheme.onSurface
-                    )
-                }
-            }
-
-            TDSpacer()
-
-            TDTextField(
-                modifier = Modifier.weight(1f).wrapContentSize().fillMaxSize(),
-                value = tdNote.content,
-                onValueChange = { },
-                placeholder = "Default...",
-                isSingleLine = false,
-                paddingValues = PaddingValues(15.dp)
-            )
-        }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun NoteItemPreview() {
-    var s = "ASD\nDDD\nDDDDDA\nasd\ns\nsad\ns\ns\ns\ns\ns\ns\ns\ns\ns\nss\ns\ns"
-    TDNoteCard(
-        TDNote("x", "Title", s+s),
-        onClick = {},
-        onDeleteClick = {}
-    )
 }

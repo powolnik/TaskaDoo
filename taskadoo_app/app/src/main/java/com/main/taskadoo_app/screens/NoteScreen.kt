@@ -3,7 +3,7 @@ package com.main.taskadoo_app.screens
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.TopAppBar
+import com.main.taskadoo_app.components.TDNoteCard
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -13,7 +13,6 @@ import com.main.taskadoo_app.src.TDNote
 import com.main.taskadoo_app.components.TDButton
 import com.main.taskadoo_app.components.TDColumn
 import com.main.taskadoo_app.components.TDRow
-import com.main.taskadoo_app.src.TDNoteCard
 
 
 /*** Composable screen for displaying a note.
@@ -56,6 +55,6 @@ fun NoteScreen(/*navController: NavController*/) {
 
 @Preview(showBackground = true)
 @Composable
-fun NotePreviewScreenPreview(){
+fun NoteScreenPreview(){
 	NoteScreen()
 }

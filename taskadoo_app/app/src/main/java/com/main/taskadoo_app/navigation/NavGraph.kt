@@ -46,9 +46,6 @@ fun SetupNavGraph(
             composable(route = Screen.Note.route) {
                 NoteScreen(/*navController*/)
             }
-            composable(route = Screen.AddNote.route) {
-//                NoteScreen(navController)
-            }
             composable(route = Screen.Settings.route) {
                 SettingsScreen(navController)
             }

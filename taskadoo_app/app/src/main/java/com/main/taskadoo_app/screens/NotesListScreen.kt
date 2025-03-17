@@ -21,11 +21,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.main.taskadoo_app.components.TDButton
+import com.main.taskadoo_app.components.TDNotesList
 import com.main.taskadoo_app.components.TDSearchBar
 import com.main.taskadoo_app.navigation.Screen
 import com.main.taskadoo_app.components.TDColumn
-import com.main.taskadoo_app.components.TDNotesList
 import com.main.taskadoo_app.src.TDNote
 
 
@@ -58,7 +57,7 @@ fun NotesListScreen(navController: NavController,
 		},
 		floatingActionButton = {
 			FloatingActionButton(
-				onClick = { navController.navigate(route = Screen.AddNote.route) },
+				onClick = { navController.navigate(route = Screen.Note.route) },
 			) {
 				Icon(Icons.Default.Add, contentDescription = "Add Note")
 			}
@@ -73,9 +72,8 @@ fun NotesListScreen(navController: NavController,
 				searchQuery = searchQuery,
 				onSearchQueryChange = { notesViewModel.updateSearchQuery(it) }
 			)
-
 			TDNotesList(
-				tdNote = listOf(TDNote()),
+				tdNotesList = listOf(TDNote("id", "T", "C"), TDNote("id", "T", "C")),
 				onNoteClick = { Toast.makeText(context, it.title, Toast.LENGTH_SHORT).show() },
 				onDeleteClick = { notesViewModel.deleteNote(it) }) /*navController.navigate(route = Screen.NotePreview.route)*/
 			}

@@ -40,7 +40,7 @@ private val LightColorsPallet = lightColorScheme(
 
     // Background and surface
     surface = SurfaceLight,
-    background = BackgroundLight,
+    background = SecondaryLight,
 
     onSurface = OnSurfaceLight,
 
@@ -48,9 +48,9 @@ private val LightColorsPallet = lightColorScheme(
 )
 
 @Composable
-fun ComposeTestTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable() () -> Unit)
+fun ComposeTheme(
+	darkTheme: Boolean = isSystemInDarkTheme(),
+	content: @Composable() () -> Unit)
 {
     val theme = if (darkTheme) {
         DarkColorsPallet

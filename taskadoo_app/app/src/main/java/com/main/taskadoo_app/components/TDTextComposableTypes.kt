@@ -1,6 +1,7 @@
 package com.main.taskadoo_app.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -38,12 +39,13 @@ import androidx.compose.ui.graphics.Shape
  * @param modifier A [Modifier] for this text field. Defaults to [Modifier] if not provided.
  * @param isSingleLine Determines whether the text field should be a single line.*/
 @Composable
-fun TDTextField(modifier: Modifier = Modifier,
+fun TDTextField(
+	modifier: Modifier = Modifier,
 	value: String = "TextField...",
 	onValueChange: (String) -> Unit,
 	placeholder: String = "DEFAULT...",
 	isSingleLine: Boolean = true,
-	paddingValues: Int = 10
+	paddingValues: PaddingValues = PaddingValues(10.dp)
 ) {
 	TextField(
 		value = value,
@@ -51,9 +53,10 @@ fun TDTextField(modifier: Modifier = Modifier,
 		placeholder = { Text(placeholder) },
 		modifier = modifier
 			.fillMaxWidth()
-			.padding(paddingValues.dp),
-		textStyle = Typography.displaySmall,
-		singleLine = isSingleLine
+			.padding(paddingValues),
+
+		textStyle = TextStyle(textAlign = TextAlign.Center),
+		singleLine = isSingleLine,
 	)
 }
 
